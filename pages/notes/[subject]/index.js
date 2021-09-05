@@ -76,14 +76,14 @@ const index = ({ subject, URL }) => {
             {subject.Chapters.map((chapter) => (
               <section key={chapter.id} class="text-blueGray-700 py-5">
                 <div class="container rounded-lg bg-white lg:w-2/3 shadow-xl flex flex-col items-center px-5 py-6 mx-auto">
-                  <Link href={subject.Slug+"/"+chapter.Slug}>
+                  <Link href={subject.Slug + "/" + chapter.Slug}>
                     <a>
                       <div class="flex flex-col w-full mb-6 text-left ">
                         <div class="w-full mx-auto">
-                          <h1 class="mx-auto mb-3 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">
+                          <h1 class="mx-auto mb-3 text-left text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">
                             {chapter.Name}
                           </h1>
-                          <p class="mx-auto text-base font-medium leading-relaxed text-blueGray-700 ">
+                          <p class="mx-auto text-left text-base font-medium leading-relaxed text-blueGray-700 ">
                             {chapter.Description}
                           </p>
                         </div>
@@ -112,7 +112,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  let empty;
   const slug = params.subject;
   const URL = process.env.APP_URL + "/notes/" + slug;
   const data = await client.query({
@@ -120,13 +119,8 @@ export async function getStaticProps({ params }) {
     variables: { slug: slug },
   });
   const subject = await data.data.subjects[0];
-  if (Object.entries(subject.Chapters).length === 0) {
-    empty = true;
-  } else {
-    empty = false;
-  }
 
   return {
-    props: { subject, empty, URL },
+    props: { subject, URL },
   };
 }
