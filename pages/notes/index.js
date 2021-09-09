@@ -2,22 +2,20 @@ import Link from "next/link";
 import Newslater from "@/comp/Newslater";
 import client from "apolloClient";
 import GET_SUBJECTS from "@/query/subjects";
-import Head from "next/head";
+import Seo from "@/comp/Seo";
 
 const index = ({ subjects, URL }) => {
   return (
     <>
-      <Head>
-        <title>CHEMCASTS::Subjects</title>
-        <meta name="twitter:title" content="Chemical Engg. Subjects" />
-        <meta name="twitter:description" content="" />
-        <meta name="twitter:image" content="" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Chemical Engg. Subjects" />
-        <meta property="og:description" content="" />
-        <meta property="og:image" content="" />
-        <meta property="og:url" content={URL} />
-      </Head>
+      <Seo
+        title="Subjects"
+        description="Chemical Engg. Subjects"
+        twTitle="Chemical Engg. Subjects"
+        twDescription=""
+        ogTitle="Chemical Engg. Subjects"
+        ogDescription=""
+        ogUrl={URL}
+      />
       <header className="grid grid-cols-12 bg-black">
         <div className="lg:col-span-6 lg:col-start-2 lg:pt-48 lg:pb-64 md:col-span-6 md:col-start-2 col-span-10 col-start-2 py-24">
           <h1 className="font-display md:text-6xl xl:text-8xl text-6xl font-semibold leading-normal tracking-tighter text-white">

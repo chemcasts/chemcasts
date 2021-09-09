@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 const GET_CHAPTER = gql`
-  query chapter($slug: String) {
+  query chapter($slug: String, $note: String) {
     chapters(where: { Slug: $slug }) {
       id
       Name
@@ -17,6 +17,12 @@ const GET_CHAPTER = gql`
         Name
         Slug
       }
+    }
+    notes(where: { Slug: $note }) {
+      id
+      Name
+      Slug
+      Body
     }
   }
 `;

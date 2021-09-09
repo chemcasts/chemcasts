@@ -1,24 +1,26 @@
 import client from "apolloClient";
 import GET_SUBJECT from "@/query/subject";
 import GET_SUBJECTS_PATHS from "@/query/subjectsPaths";
-import Head from "next/head";
 import Link from "next/link";
 import Router from "next/router";
+import Seo from "@/comp/Seo";
 
 const index = ({ subject, URL }) => {
+  console.log(subject);
   return (
     <>
-      <Head>
-        <title>CHEMCASTS::{subject.Name}</title>
-        <meta name="twitter:title" content={subject.Name} />
-        <meta name="twitter:description" content={subject.Description} />
-        <meta name="twitter:image" content={subject.Image.url} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={subject.Name} />
-        <meta property="og:description" content={subject.Description} />
-        <meta property="og:image" content={subject.Image.url} />
-        <meta property="og:url" content={URL} />
-      </Head>
+      <Seo
+        title={subject.Name}
+        description={subject.Description}
+        twTitle={subject.Name}
+        twDescription={subject.Description}
+        twImage={subject.Image.url}
+        ogTitle={subject.Name}
+        ogDescription={subject.Description}
+        ogImage={subject.Image.url}
+        ogUrl={URL}
+        canonical={URL}
+      />
       <header className="text-white bg-black">
         <div className="flex flex-col items-center px-5 py-10 mx-auto md:flex-row lg:px-28">
           <div className="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
@@ -74,16 +76,16 @@ const index = ({ subject, URL }) => {
         ) : (
           <>
             {subject.Chapters.map((chapter) => (
-              <section key={chapter.id} class="text-blueGray-700 py-5">
-                <div class="container rounded-lg bg-white lg:w-2/3 shadow-xl flex flex-col items-center px-5 py-6 mx-auto">
+              <section key={chapter.id} className="text-blueGray-700 py-5">
+                <div className="container rounded-lg bg-white lg:w-2/3 shadow-xl flex flex-col items-center px-5 py-6 mx-auto">
                   <Link href={subject.Slug + "/" + chapter.Slug}>
                     <a>
-                      <div class="flex flex-col w-full mb-6 text-left ">
-                        <div class="w-full mx-auto">
-                          <h1 class="mx-auto mb-3 text-left text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">
+                      <div className="flex flex-col w-full mb-6 text-left ">
+                        <div className="w-full mx-auto">
+                          <h1 className="mx-auto mb-3 text-left text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">
                             {chapter.Name}
                           </h1>
-                          <p class="mx-auto text-left text-base font-medium leading-relaxed text-blueGray-700 ">
+                          <p className="mx-auto text-left text-base font-medium leading-relaxed text-blueGray-700 ">
                             {chapter.Description}
                           </p>
                         </div>
@@ -108,18 +110,30 @@ export async function getStaticPaths() {
   const paths = subjects.map((subject) => ({
     params: { subject: subject.Slug },
   }));
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params }) {
+  const x = 1;
   const slug = params.subject;
   const URL = process.env.APP_URL + "/notes/" + slug;
   const data = await client.query({
     query: GET_SUBJECT,
     variables: { slug: slug },
   });
+
   const subject = await data.data.subjects[0];
 
+  if (x === 1) {
+    console.log("404");
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+  console.log(subject);
   return {
     props: { subject, URL },
   };

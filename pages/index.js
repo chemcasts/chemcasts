@@ -1,20 +1,18 @@
-import Head from "next/head";
 import Newslater from "@/comp/Newslater";
+import Seo from "@/comp/Seo";
 
-export default function Home({URL}) {
+export default function Home({ URL }) {
   return (
     <>
-      <Head>
-        <title>CHEMCASTS</title>
-        <meta name="twitter:title" content="Chemical Engg. Subjects" />
-        <meta name="twitter:description" content="" />
-        <meta name="twitter:image" content="" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Chemical Engg. Subjects" />
-        <meta property="og:description" content="" />
-        <meta property="og:image" content="" />
-        <meta property="og:url" content={URL} />
-      </Head>
+      <Seo
+        title="CHEMCASTS"
+        description="Chemical Engg. Subjects"
+        twTitle="CHEMCASTS"
+        twDescription="Chemical Engg. Subjects"
+        ogTitle="CHEMCASTS"
+        ogDescription="Chemical Engg. Subjects"
+        ogUrl={URL}
+      />
       <header className="text-white min-h-screen bg-black">
         <div className="flex pt-10 flex-col items-start px-5 py-3 mx-auto md:flex-row lg:px-28">
           <h1 className="text-5xl font-content font-white tracking-tighter md:text-7xl title-font">
