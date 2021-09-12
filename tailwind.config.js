@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
@@ -19,6 +20,19 @@ module.exports = {
           700: "#991B00",
           800: "#661200",
           900: "#330900",
+        },
+        "brand-content": {
+          DEFAULT: "#1D1B84",
+          50: "#9C9AEA",
+          100: "#8785E6",
+          200: "#5D5BDD",
+          300: "#3330D5",
+          400: "#2624AE",
+          500: "#1D1B84",
+          600: "#14125A",
+          700: "#0A0A2F",
+          800: "#010105",
+          900: "#000000",
         },
         green: {
           DEFAULT: "#00FF00",
@@ -46,19 +60,6 @@ module.exports = {
           800: "#000000",
           900: "#000000",
         },
-        gray: {
-          DEFAULT: "#353535",
-          50: "#A8A8A8",
-          100: "#9B9B9B",
-          200: "#828282",
-          300: "#686868",
-          400: "#4F4F4F",
-          500: "#353535",
-          600: "#1C1C1C",
-          700: "#020202",
-          800: "#000000",
-          900: "#000000",
-        },
         info: "#2094f3",
         success: "#009485",
         warning: "#ff9900",
@@ -74,6 +75,20 @@ module.exports = {
         title: ["Anton", "sans-serif"],
         base: ["Rubik", "sans-serif"],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            blockquote: {
+              fontWeight: "500",
+              fontStyle: "italic",
+              color: colors.gray[900],
+              borderLeftWidth: "0.25rem",
+              borderLeftColor: theme("colors.brand.DEFAULT"),
+              quotes: '"\\201C""\\201D""\\2018""\\2019"',
+            },
+          },
+        },
+      }),
     },
   },
   corePlugins: {},
@@ -82,5 +97,6 @@ module.exports = {
       strategy: "class",
     }),
     require("@tailwindcss/typography"),
+    require('@tailwindcss/line-clamp'),
   ],
 };

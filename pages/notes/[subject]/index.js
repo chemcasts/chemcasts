@@ -1,12 +1,40 @@
 import client from "apolloClient";
 import GET_SUBJECT from "@/query/subject";
 import GET_SUBJECTS_PATHS from "@/query/subjectsPaths";
-import Link from "next/link";
 import Router from "next/router";
 import Seo from "@/comp/Seo";
+import { useRouter } from "next/router";
+import Chapter from "@/comp/Notes/Chapter";
 
 const index = ({ subject, URL }) => {
-  console.log(subject);
+  const router = useRouter();
+  if (router.isFallback) {
+    return (
+      <>
+        <section className="pt-10 pb-10">
+          <div className="container rounded bg-gray-200 flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-28">
+            <div className="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
+              <img
+                className="animate-spin object-cover object-center rounded"
+                alt="It's empty Here"
+                loading="lazy"
+                src="/svg/loader.svg"
+              />
+            </div>
+            <div className="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
+              <h1 className="mb-8 text-3xl font-bold tracking-tighter text-left text-black lg:text-5xl title-font">
+                Loading....
+              </h1>
+              <p className="mb-8 text-xl leading-relaxed text-left  ">
+                Page is loading.Wait a moment ...
+              </p>
+            </div>
+          </div>
+        </section>
+      </>
+    );
+  }
+
   return (
     <>
       <Seo
@@ -76,24 +104,7 @@ const index = ({ subject, URL }) => {
         ) : (
           <>
             {subject.Chapters.map((chapter) => (
-              <section key={chapter.id} className="text-blueGray-700 py-5">
-                <div className="container rounded-lg bg-white lg:w-2/3 shadow-xl flex flex-col items-center px-5 py-6 mx-auto">
-                  <Link href={subject.Slug + "/" + chapter.Slug}>
-                    <a>
-                      <div className="flex flex-col w-full mb-6 text-left ">
-                        <div className="w-full mx-auto">
-                          <h1 className="mx-auto mb-3 text-left text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font">
-                            {chapter.Name}
-                          </h1>
-                          <p className="mx-auto text-left text-base font-medium leading-relaxed text-blueGray-700 ">
-                            {chapter.Description}
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </Link>
-                </div>
-              </section>
+              <Chapter key={chapter.id} chapter={chapter} subjectSlug={subject.Slug} />
             ))}
           </>
         )}
@@ -114,7 +125,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const x = 1;
   const slug = params.subject;
   const URL = process.env.APP_URL + "/notes/" + slug;
   const data = await client.query({
@@ -122,19 +132,16 @@ export async function getStaticProps({ params }) {
     variables: { slug: slug },
   });
 
-  const subject = await data.data.subjects[0];
-
-  if (x === 1) {
-    console.log("404");
+  if (Object.entries(data.data.subjects).length === 0) {
     return {
-      redirect: {
-        destination: "/",
-        permanent: false,
-      },
+      notFound: true,
     };
   }
-  console.log(subject);
+
+  const subject = await data.data.subjects[0];
+
   return {
     props: { subject, URL },
+    revalidate: 10,
   };
 }

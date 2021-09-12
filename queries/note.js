@@ -8,6 +8,11 @@ const GET_NOTE = gql`
       Slug
       Body
       Chapter {
+        Subject {
+          id
+          Name
+          Slug
+        }
         Notes {
           id
           Name

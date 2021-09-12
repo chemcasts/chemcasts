@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Drawer = ({ links,base }) => {
+const Drawer = ({ links, base }) => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   return (
     <>
@@ -9,12 +9,12 @@ const Drawer = ({ links,base }) => {
         id="sidebar"
         className={
           (drawerOpen ? "block fixed z-20 " : "hidden z-60 ") +
-          "inset-0 flex-none bg-black bg-opacity-25 w-full lg:bg-white lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block"
+          "inset-0 flex-none bg-black bg-opacity-25 w-full lg:bg-gray-900 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-60 xl:w-72 lg:block"
         }
       >
         <div
           id="navWrapper"
-          className="h-screen overflow-y-auto scrolling-touch lg:block lg:sticky lg:bg-transparent lg:top-10  bg-white mr-24 lg:mr-0"
+          className="h-screen overflow-y-auto scrolling-touch lg:block lg:sticky lg:bg-transparent lg:top-10  bg-gray-900 mr-24 lg:mr-0"
         >
           <nav
             id="nav"
@@ -22,19 +22,16 @@ const Drawer = ({ links,base }) => {
           >
             <ul>
               <li className="mt-8">
-                <h5 className="px-3 mb-3 lg:mb-3 uppercase tracking-wide font-semibold text-sm lg:text-xs text-gray-900">
+                <h5 className="px-3 mb-3 lg:mb-3 uppercase tracking-wide font-semibold text-lg lg:text-xl text-brand-600">
                   Topics
                 </h5>
                 <ul>
                   {links.map((link) => (
                     <li key={link.id}>
-                      <Link href={base+"/"+link.Slug} >
-                      <a
-                        className="px-3 py-2 transition-colors duration-200 relative block hover:text-gray-900 text-gray-500"
-                      >
-                        <span className="rounded-md absolute inset-0 bg-cyan-50 opacity-0"></span>
-                        <span className="relative">{link.Name}</span>
-                      </a>
+                      <Link href={base + "/" + link.Slug}>
+                        <a className="px-3 py-2 transition-colors duration-200 hover:rounded hover:bg-cyan-50 relative block hover:text-brand-400 text-brand">
+                          <span className="relative text-xl">{link.Name}</span>
+                        </a>
                       </Link>
                     </li>
                   ))}
