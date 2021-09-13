@@ -77,6 +77,7 @@ const index = ({ chapter, note, URL }) => {
         <div className="container lg:flex">
           <Drawer
             links={chapter.Notes}
+            activeLink={note.Slug}
             base={"/notes/" + chapter.Subject.Slug + "/" + chapter.Slug}
           />
           <Note

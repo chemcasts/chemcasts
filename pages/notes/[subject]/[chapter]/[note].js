@@ -1,11 +1,11 @@
 import Drawer from "@/comp/Notes/Drawer";
-import Markdown from "@/comp/Markdown";
 import client from "apolloClient";
 import GET_NOTE from "@/query/note";
 import GET_NOTES_PATHS from "@/query/notesPaths";
 import { useRouter } from "next/router";
+import Note from "@/comp/Notes/Note";
 
-const Note = ({ note }) => {
+const NotePage = ({ note }) => {
   const router = useRouter();
   if (router.isFallback) {
     return (
@@ -40,6 +40,7 @@ const Note = ({ note }) => {
         <div className="container lg:flex">
           <Drawer
             links={note.Chapter.Notes}
+            activeLink={note.Slug}
             base={
               "/notes/" + note.Chapter.Subject.Slug + "/" + note.Chapter.Slug
             }
@@ -58,7 +59,7 @@ const Note = ({ note }) => {
   );
 };
 
-export default Note;
+export default NotePage;
 
 export async function getStaticPaths() {
   const data = await client.query({ query: GET_NOTES_PATHS });

@@ -27,10 +27,10 @@ const Navbar = () => {
               <img
                 src="https://laravelnews.imgix.net/laravel-news__logo.png?ixlib=php-3.3.1"
                 className="w-12 h-12"
-                alt="Laravel News"
+                alt="CHEMCASTS"
               />
               <p className="font-display text-brand-500 ml-2 mr-4 text-xl font-bold leading-normal">
-                Laravel News
+                CHEMCASTS
               </p>
             </a>
           </Link>
@@ -64,10 +64,10 @@ const Navbar = () => {
                 <img
                   src="https://laravelnews.imgix.net/laravel-news__logo.png?ixlib=php-3.3.1"
                   className="w-12 h-12"
-                  alt="Laravel News"
+                  alt="CHEMCASTS"
                 />
                 <p className="font-display sm:hidden lg:inline-block text-brand-500 ml-2 mr-4 text-xl font-bold leading-normal">
-                  Laravel News
+                  CHEMCASTS
                 </p>
               </a>
             </Link>
@@ -87,14 +87,12 @@ const Navbar = () => {
                 Search
               </label>
               <div className="relative">
-                <form action="/search">
-                  <input
-                    id="-header_desktop-search"
-                    className="form-input rounded"
-                    name="q"
-                    placeholder="Search"
-                  />
-                </form>
+                <input
+                  id="-header_desktop-search"
+                  className="form-input rounded"
+                  name="q"
+                  placeholder="Search"
+                />
               </div>
             </div>
           </div>
@@ -131,10 +129,10 @@ const Navbar = () => {
                 <img
                   src="https://laravelnews.imgix.net/laravel-news__logo.png?ixlib=php-3.3.1"
                   className="w-12 h-12"
-                  alt="Laravel News"
+                  alt="CHEMCASTS"
                 />
                 <p className="font-display text-brand-500 ml-2 text-xl font-bold leading-normal">
-                  Laravel News
+                  CHEMCASTS
                 </p>
               </a>
             </div>
@@ -143,14 +141,12 @@ const Navbar = () => {
                 Search
               </label>
               <div className="relative">
-                <form action="/search">
-                  <input
-                    id="-header_mobile-search"
-                    className="form-input rounded"
-                    name="q"
-                    placeholder="Search"
-                  />
-                </form>
+                <input
+                  id="-header_mobile-search"
+                  className="form-input rounded"
+                  name="q"
+                  placeholder="Search"
+                />
               </div>
             </div>
             <div className="flex-grow w-full max-w-lg">

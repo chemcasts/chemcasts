@@ -86,6 +86,19 @@ module.exports = {
               borderLeftColor: theme("colors.brand.DEFAULT"),
               quotes: '"\\201C""\\201D""\\2018""\\2019"',
             },
+            "ol > li::before": {
+              content:
+                'counter(list-item, var(--list-counter-style, decimal)) "."',
+              position: "absolute",
+              fontWeight: "400",
+              color: theme("colors.brand.DEFAULT"),
+            },
+            "ul > li::before": {
+              content: '""',
+              position: "absolute",
+              backgroundColor: theme("colors.brand.DEFAULT"),
+              borderRadius: "50%",
+            },
           },
         },
       }),
@@ -97,6 +110,6 @@ module.exports = {
       strategy: "class",
     }),
     require("@tailwindcss/typography"),
-    require('@tailwindcss/line-clamp'),
+    require("@tailwindcss/line-clamp"),
   ],
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Drawer = ({ links, base }) => {
+const Drawer = ({ links, activeLink, base }) => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   return (
     <>
@@ -27,9 +27,16 @@ const Drawer = ({ links, base }) => {
                 </h5>
                 <ul>
                   {links.map((link) => (
-                    <li key={link.id}>
+                    <li className="mt-1" key={link.id}>
                       <Link href={base + "/" + link.Slug}>
-                        <a className="px-3 py-2 transition-colors duration-200 hover:rounded hover:bg-cyan-50 relative block hover:text-brand-400 text-brand">
+                        <a
+                          className={
+                            (activeLink === link.Slug
+                              ? "rounded bg-cyan-50 "
+                              : "hover:rounded hover:bg-cyan-50 ") +
+                            "px-3 py-2 transition-colors duration-200 relative block hover:text-brand-400 text-brand"
+                          }
+                        >
                           <span className="relative text-xl">{link.Name}</span>
                         </a>
                       </Link>
