@@ -5,7 +5,6 @@ export default function Home({ URL }) {
   return (
     <>
       <Seo
-        title="CHEMCASTS"
         description="Chemical Engg. Subjects"
         twTitle="CHEMCASTS"
         twDescription="Chemical Engg. Subjects"
@@ -13,7 +12,7 @@ export default function Home({ URL }) {
         ogDescription="Chemical Engg. Subjects"
         ogUrl={URL}
       />
-      <header className="text-white min-h-screen bg-black">
+      <header className="text-white bg-black">
         <div className="flex pt-10 flex-col items-start px-5 py-3 mx-auto md:flex-row lg:px-28">
           <h1 className="text-5xl font-content font-white tracking-tighter md:text-7xl title-font">
             {" "}
@@ -22,18 +21,15 @@ export default function Home({ URL }) {
         </div>
         <div className="flex flex-col items-center px-5 py-10 mx-auto md:flex-row lg:px-28">
           <div className="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
-            <h2 className="mb-8 text-x font-semibold tracking-widest uppercase title-font">
+            <h1 className="mb-5 text-4xl font-white tracking-wide uppercase md:text-5xl title-font">
               {" "}
-              Your long length tagline hey chemicos{" "}
-            </h2>
-            <h1 className="mb-5 text-3xl font-white tracking-tighter md:text-5xl title-font">
-              {" "}
-              Medium length display headline.{" "}
+              World wide chemico community{" "}
             </h1>
-            <p className="mb-8 text-x leading-relaxed text-left">
+            <p className="mb-8 text-lg leading-relaxed text-left">
               {" "}
-              Deploy your mvp in minutes, not days. WT offers you a a wide
-              selection swapable sections for your landing page.{" "}
+              Digital library and commuity portal for 
+              <strong className="tracking-wider uppercase"> chemical </strong>
+              engineers.{" "}
             </p>
             <div className="flex flex-col justify-center lg:flex-row">
               <button className="bg-brand rounded px-3 h-12 w-full">
@@ -57,7 +53,7 @@ export default function Home({ URL }) {
         <div className="container items-center px-5 py-3 mx-auto lg:px-24">
           <div className="flex flex-wrap mb-5 text-left">
             <div className="w-full p-4 mx-auto lg:w-1/3">
-              <div className="p-4 lg:p-8 border-t-8 border-brand-600 bg-white rounded">
+              <div className="p-4 lg:p-8 border-t-8 border-brand-500 bg-white rounded">
                 <div className="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto mb-5 bg-gray-100 rounded-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +102,7 @@ export default function Home({ URL }) {
                 </div>
                 <h1 className="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter lg:text-3xl title-font">
                   {" "}
-                  Short length headline.{" "}
+                  For Students{" "}
                 </h1>
                 <p className="mx-auto text-base font-medium leading-relaxed">
                   You're about to launch soon and must be 100% focused on your
@@ -116,7 +112,7 @@ export default function Home({ URL }) {
               </div>
             </div>
             <div className="w-full p-4 mx-auto lg:w-1/3">
-              <div className="p-4 lg:p-8 border-t-8 border-brand-600 bg-white rounded">
+              <div className="p-4 lg:p-8 border-t-8 border-brand-500 bg-white rounded">
                 <div className="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto mb-5 bg-gray-100 rounded-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +161,7 @@ export default function Home({ URL }) {
                 </div>
                 <h1 className="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter lg:text-3xl title-font">
                   {" "}
-                  Short length headline.{" "}
+                  For Professionals{" "}
                 </h1>
                 <p className="mx-auto text-base font-medium leading-relaxed">
                   You're about to launch soon and must be 100% focused on your
@@ -175,7 +171,7 @@ export default function Home({ URL }) {
               </div>
             </div>
             <div className="w-full p-4 mx-auto lg:w-1/3">
-              <div className="p-4 lg:p-8 border-t-8 border-brand-600 bg-white rounded">
+              <div className="p-4 lg:p-8 border-t-8 border-brand-500 bg-white rounded">
                 <div className="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto mb-5 bg-gray-100 rounded-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -222,9 +218,9 @@ export default function Home({ URL }) {
                     ></line>
                   </svg>
                 </div>
-                <h1 className="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter lg:text-3xl title-font">
+                <h1 className="mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter lg:text-3xl">
                   {" "}
-                  Short length headline.{" "}
+                  For Teachers{" "}
                 </h1>
                 <p className="mx-auto text-base font-medium leading-relaxed">
                   You're about to launch soon and must be 100% focused on your

@@ -25,7 +25,7 @@ const Navbar = () => {
           <Link href="/">
             <a className="flex items-center" aria-label="Home">
               <img
-                src="https://laravelnews.imgix.net/laravel-news__logo.png?ixlib=php-3.3.1"
+                src="/logo.svg"
                 className="w-12 h-12"
                 alt="CHEMCASTS"
               />
@@ -62,7 +62,7 @@ const Navbar = () => {
             <Link href="/">
               <a className="flex items-center mr-5" aria-label="Home">
                 <img
-                  src="https://laravelnews.imgix.net/laravel-news__logo.png?ixlib=php-3.3.1"
+                  src="/logo.svg"
                   className="w-12 h-12"
                   alt="CHEMCASTS"
                 />
@@ -127,7 +127,7 @@ const Navbar = () => {
             <div className="pt-8 mb-6">
               <a className="flex items-center" href="/" aria-label="Home">
                 <img
-                  src="https://laravelnews.imgix.net/laravel-news__logo.png?ixlib=php-3.3.1"
+                  src="/logo.svg"
                   className="w-12 h-12"
                   alt="CHEMCASTS"
                 />
