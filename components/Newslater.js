@@ -1,4 +1,9 @@
+const data = { newslater: 0 };
+
 const Newslater = () => {
+  if (data.newslater == 0) {
+    return <></>;
+  }
   return (
     <>
       <div className="justify-center border-t-4 p-8 shadow relative md:col-span-6 col-span-12 text-gray-500 bg-white">

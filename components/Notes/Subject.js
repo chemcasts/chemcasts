@@ -1,34 +1,40 @@
 import Link from "next/link";
 
-const Subject = ({subject}) => {
-    return (
-        <>
-        <section id={subject.id} className="pt-10 pb-10">
-            <div className="container rounded bg-gray-200 flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-28">
-              <div className="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
-                <img
-                  className="object-cover object-center rounded"
-                  alt={subject.Name}
-                  loading="lazy"
-                  src={subject.Image.url}
-                />
-              </div>
-              <div className="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
-                <h1 className="mb-8 text-2xl font-bold tracking-tighter text-left text-black lg:text-5xl title-font">
-                  {subject.Name}
-                </h1>
-                <p className="mb-8 line-clamp-3 lg:line-clamp-5 text-base leading-relaxed text-left  ">
-                  {subject.Description}
-                </p>
-                <div className="flex flex-col justify-left lg:flex-row">
-                  <Link href={"/notes/" + subject.Slug}>
-                    <a>
-                      <button className="flex items-center px-6 py-2 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-brand rounded hover:bg-brand-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-                        {" "}
-                        
+const Subject = ({ subject }) => {
+  return (
+    <>
+      <section id={subject.id} className="pt-5 pb-5 mx-2 lg:mx-10">
+        <div className="container rounded bg-gray-200 flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-16">
+          <div className="w-full mb-6 lg:w-1/3 lg:max-w-lg md:w-1/2">
+            <img
+              className="object-cover object-center rounded"
+              alt={subject.Name}
+              loading="lazy"
+              src={subject.Image.url}
+            />
+          </div>
+          <div className="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
+            <h1 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-left text-black title-font">
+              {subject.Name}
+            </h1>
+            <p className="mb-8 line-clamp-3 lg:line-clamp-5 text-base leading-relaxed text-left  ">
+              {subject.Description}
+            </p>
+            <div className="flex flex-wrap items-center w-full">
+              <div className="items-center text-center my-2 px-1 w-1/3 overflow-hidden sm:my-1 sm:px-1 sm:w-1/3 md:my-1 md:px-1 md:w-1/3 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
+                <div className="mr-1 bg-cyan-500 rounded">
+                  <div className="place-items-center">
+                    <div className="text-3xl text-white font-bold">40</div>
+                    <div className="text-gray-300">Notes</div>
+                  </div>
+                </div>
+                <div className="mr-1 mt-1 items-center text-center justify-center justify-items-center bg-cyan-500 rounded">
+                  <Link href="#">
+                    <a className="hover:opacity-70">
+                      <div className="text-white py-1 items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6"
+                          className="h-6 w-6 m-auto"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -36,19 +42,81 @@ const Subject = ({subject}) => {
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
-                            strokeWidth={2}
+                            strokeWidth={3}
                             d="M14 5l7 7m0 0l-7 7m7-7H3"
                           />
-                        </svg>{" "}
-                      </button>
+                        </svg>
+                      </div>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="items-center text-center my-2 px-1 w-1/3 overflow-hidden sm:my-1 sm:px-1 sm:w-1/3 md:my-1 md:px-1 md:w-1/3 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
+                <div className="mr-1 bg-indigo-500 rounded">
+                  <div className="place-items-center">
+                    <div className="text-3xl text-white font-bold">40</div>
+                    <div className="text-gray-300">Examples</div>
+                  </div>
+                </div>
+                <div className="mr-1 mt-1 items-center text-center justify-center justify-items-center bg-indigo-500 rounded">
+                  <Link href="#">
+                    <a className="hover:opacity-70">
+                      <div className="text-white py-1 items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-6 w-6 m-auto"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={3}
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          />
+                        </svg>
+                      </div>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+              <div className="items-center text-center my-2 px-1 w-1/3 overflow-hidden sm:my-1 sm:px-1 sm:w-1/3 md:my-1 md:px-1 md:w-1/3 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
+                <div className="mr-1 bg-yellow-500 rounded">
+                  <div className="place-items-center">
+                    <div className="text-3xl text-white font-bold">40</div>
+                    <div className="text-gray-300">Books</div>
+                  </div>
+                </div>
+                <div className="mr-1 mt-1 items-center text-center justify-center justify-items-center bg-yellow-500 rounded">
+                  <Link href="#">
+                    <a className="hover:opacity-70">
+                      <div className="text-white py-1 items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-6 w-6 m-auto"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={3}
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          />
+                        </svg>
+                      </div>
                     </a>
                   </Link>
                 </div>
               </div>
             </div>
-          </section>
-        </>
-    );
-}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default Subject;

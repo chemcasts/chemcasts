@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="grid grid-cols-12 gap-8 py-16 mx-auto">
           <div className="lg:col-span-3 lg:col-start-2 md:col-span-5 md:col-start-2 col-span-10 col-start-2 mb-10">
             <p className="mb-4 text-base font-title tracking-wider uppercase text-white">
-              World wide chemico community
+              World wide quimico community
             </p>
             <div className="flex flex-wrap items-center">
               <img src="/logo.svg" className="w-12 h-12" alt="CHEMCASTS" />
@@ -54,7 +54,7 @@ const Footer = () => {
             <p className="mb-4 text-base text-white">Follow CHEMCASTS on</p>
             <div className="flex flex-wrap">
               <a
-                href="https://www.facebook.com/laravelnews"
+                href="https://www.twitter.com/CHEMCASTS_"
                 rel="noopener"
                 className="hover:bg-gray-500 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-700 rounded-sm shadow"
               >
@@ -86,7 +86,7 @@ const Footer = () => {
                         aria-label={link.name}
                         className="mr-6 mb-2"
                       >
-                        <span className="text-white hover:border-b-2 hover:border-white text-base ">
+                        <span className="text-gray-200 hover:border-b-2 hover:border-white lg:text-lg text-base">
                           {link.name}
                         </span>
                       </a>
@@ -100,7 +100,7 @@ const Footer = () => {
                     © 2012 - 2021 CHEMCASTS
                   </p>
                   <p className="text-xs text-gray-300">
-                    A division of dotdev inc.
+                    A division of SECTION-D Inc.
                   </p>
                 </div>
               </div>
