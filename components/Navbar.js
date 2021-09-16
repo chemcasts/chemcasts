@@ -5,7 +5,7 @@ import Twitter from "@/comp/Icons/Twitter";
 import Linkedin from "@/comp/Icons/Linkedin";
 
 const data = [
-  { name: "Notes", href: "/notes" },
+  { name: "Learn", href: "/learn" },
   { name: "Examples", href: "/examples" },
   { name: "Books", href: "/books" },
   { name: "News", href: "/news" },

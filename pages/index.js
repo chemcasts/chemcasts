@@ -14,20 +14,24 @@ export default function Home({ URL }) {
       />
       <header className="text-white bg-black">
         <div className="flex pt-10 flex-col items-start px-5 py-3 mx-auto md:flex-row lg:px-28">
-          <h1 className="text-5xl font-content font-white tracking-tighter md:text-7xl title-font">
+          <h1 className="text-5xl font-content text-brand tracking-tighter md:text-7xl title-font">
             {" "}
             CHEMCASTS{" "}
           </h1>
         </div>
         <div className="flex flex-col items-center px-5 py-10 mx-auto md:flex-row lg:px-28">
           <div className="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
-            <h1 className="mb-5 text-4xl font-white tracking-wide uppercase md:text-5xl title-font">
+            <h1 className="mb-5 text-4xl tracking-wide uppercase md:text-5xl title-font">
               {" "}
-              World wide chemico community{" "}
+              World wide{" "}
+              <strong className="rounded text-brand">
+                chemico
+              </strong>{" "}
+              community{" "}
             </h1>
             <p className="mb-8 text-lg leading-relaxed text-left">
               {" "}
-              Digital library and commuity portal for 
+              Digital library and commuity portal for
               <strong className="tracking-wider uppercase"> chemical </strong>
               engineers.{" "}
             </p>
