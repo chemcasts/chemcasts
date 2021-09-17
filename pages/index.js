@@ -68,17 +68,18 @@ export default function Home({ URL }) {
                       {" "}
                       Notes
                     </h4>
-                    <p className="mb-3 text-base leading-relaxed text-blueGray-500">
+                    <p className="mb-3 text-base leading-relaxed text-blueGray-700">
                       {" "}
                       Well-written notes to understanding each chemical
                       engineering topic and concept easily. Make your
                       fundamentals strong.{" "}
                     </p>
-                    <p></p>
-                    <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
-                      {" "}
-                      Read{" "}
-                    </button>
+                    <Link href="/learn/notes">
+                      <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
+                        {" "}
+                        Read{" "}
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -95,16 +96,18 @@ export default function Home({ URL }) {
                       {" "}
                       Examples
                     </h4>
-                    <p className="mb-3 text-base leading-relaxed text-blueGray-500">
+                    <p className="mb-3 text-base leading-relaxed text-blueGray-700">
                       {" "}
-                      If any Environment Variables values are changed between
-                      Deployments, deduplication will always be bypassed.{" "}
+                      Solve given examples based on every topic and subject to
+                      sharpen your concept and enhance your problem-solving
+                      ability.{" "}
                     </p>
-                    <p></p>
-                    <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
-                      {" "}
-                      Solve{" "}
-                    </button>
+                    <Link href="/learn/examples">
+                      <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
+                        {" "}
+                        Solve{" "}
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -121,16 +124,18 @@ export default function Home({ URL }) {
                       {" "}
                       Books
                     </h4>
-                    <p className="mb-3 text-base leading-relaxed text-blueGray-500">
+                    <p className="mb-3 text-base leading-relaxed text-blueGray-700">
                       {" "}
-                      If any Environment Variables values are changed between
-                      Deployments, deduplication will always be bypassed.{" "}
+                      Recommended books for every subject. Explore these books.
+                      Going beyond the surface of a subject is essential to
+                      success.{" "}
                     </p>
-                    <p></p>
-                    <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
-                      {" "}
-                      Explore{" "}
-                    </button>
+                    <Link href="/learn/books">
+                      <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
+                        {" "}
+                        Explore{" "}
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
