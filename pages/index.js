@@ -44,7 +44,7 @@ export default function Home({ URL }) {
               </Link>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 lg:max-w-lg md:w-1/2">
+          <div className="w-full bg-white rounded lg:w-1/2 lg:max-w-lg md:w-1/2">
             <img
               className="object-cover object-center rounded-lg "
               alt="hero"

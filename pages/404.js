@@ -4,9 +4,9 @@ import Link from "next/link";
 const Error404 = () => {
   return (
     <>
-      <section className="text-white bg-gray-600">
+      <section className="text-white bg-gray-700">
         <div className="container flex flex-col items-start px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-28">
-          <div className="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
+          <div className="w-full bg-white rounded mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
             <img
               className="object-cover object-center rounded"
               alt="hero"
