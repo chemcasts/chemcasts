@@ -6,11 +6,11 @@ export default function Home({ URL }) {
   return (
     <>
       <Seo
-        description="Chemical Engg. Subjects"
+        description="Digital library and commuity portal for chemical engineers."
         twTitle="CHEMCASTS"
-        twDescription="Chemical Engg. Subjects"
+        twDescription="Digital library and commuity portal for chemical engineers."
         ogTitle="CHEMCASTS"
-        ogDescription="Chemical Engg. Subjects"
+        ogDescription="Digital library and commuity portal for chemical engineers."
         ogUrl={URL}
       />
       <header className="text-white bg-black">
@@ -24,8 +24,8 @@ export default function Home({ URL }) {
           <div className="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
             <h1 className="mb-5 text-4xl uppercase md:text-5xl">
               {" "}
-              World wide{" "}
-              <span className="rounded font-bold text-5xl md:text-6xl text-brand-600">
+              World wide <br />
+              <span className="rounded font-bold text-5xl md:text-6xl text-brand-600 transform rotate-2">
                 quimico
               </span>{" "}
               community portal{" "}
@@ -38,11 +38,8 @@ export default function Home({ URL }) {
             </p>
             <div className="flex flex-col justify-center lg:flex-row">
               <Link href="/learn">
-                <button className="bg-brand rounded px-3 h-12 w-full">
-                  <span className="font-bold text-xl text-white">
-                    {" "}
-                    Get Strated{" "}
-                  </span>
+                <button className="bg-brand rounded text-white hover:text-gray-300 focus:outline-none px-3 h-12 w-full">
+                  <span className="font-bold text-xl"> Get Strated </span>
                 </button>
               </Link>
             </div>
@@ -56,18 +53,18 @@ export default function Home({ URL }) {
           </div>
         </div>
       </header>
-      <section className="bg-gray-300">
+      <section className="bg-gray-400">
         <div className="container items-center px-5 py-8 mx-auto lg:px-24">
           <div className="flex flex-wrap mb-6 text-left">
             <div className="items-center px-5 py-3 lg:w-1/3">
               <div className="flex flex-wrap ">
                 <div className="w-full mx-auto my-4 bg-white border rounded-lg shadow-xl">
                   <div className="p-6">
-                    <h2 className="mb-8 text-xs font-semibold tracking-widest text-black uppercase title-font">
+                    <h2 className="mb-3 text-xs font-semibold tracking-widest text-black uppercase title-font">
                       {" "}
                       Understand concepts
                     </h2>
-                    <h4 className="mb-8 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
+                    <h4 className="mb-3 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
                       {" "}
                       Notes
                     </h4>
@@ -78,9 +75,9 @@ export default function Home({ URL }) {
                       fundamentals strong.{" "}
                     </p>
                     <p></p>
-                    <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
+                    <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
                       {" "}
-                      Let's Read{" "}
+                      Read{" "}
                     </button>
                   </div>
                 </div>
@@ -90,11 +87,11 @@ export default function Home({ URL }) {
               <div className="flex flex-wrap ">
                 <div className="w-full mx-auto my-4 bg-white border rounded-lg shadow-xl">
                   <div className="p-6">
-                    <h2 className="mb-8 text-xs font-semibold tracking-widest text-black uppercase title-font">
+                    <h2 className="mb-3 text-xs font-semibold tracking-widest text-black uppercase title-font">
                       {" "}
                       Solved Examples
                     </h2>
-                    <h4 className="mb-8 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
+                    <h4 className="mb-3 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
                       {" "}
                       Examples
                     </h4>
@@ -104,9 +101,9 @@ export default function Home({ URL }) {
                       Deployments, deduplication will always be bypassed.{" "}
                     </p>
                     <p></p>
-                    <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
+                    <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
                       {" "}
-                      Let's Solve{" "}
+                      Solve{" "}
                     </button>
                   </div>
                 </div>
@@ -116,11 +113,11 @@ export default function Home({ URL }) {
               <div className="flex flex-wrap ">
                 <div className="w-full mx-auto my-4 bg-white border rounded-lg shadow-xl">
                   <div className="p-6">
-                    <h2 className="mb-8 text-xs font-semibold tracking-widest text-black uppercase title-font">
+                    <h2 className="mb-3 text-xs font-semibold tracking-widest text-black uppercase title-font">
                       {" "}
                       Recommended Books
                     </h2>
-                    <h4 className="mb-8 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
+                    <h4 className="mb-3 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
                       {" "}
                       Books
                     </h4>
@@ -130,9 +127,9 @@ export default function Home({ URL }) {
                       Deployments, deduplication will always be bypassed.{" "}
                     </p>
                     <p></p>
-                    <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
+                    <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
                       {" "}
-                       Explore{" "}
+                      Explore{" "}
                     </button>
                   </div>
                 </div>

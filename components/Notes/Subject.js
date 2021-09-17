@@ -4,7 +4,7 @@ const Subject = ({ subject }) => {
   return (
     <>
       <section id={subject.id} className="pt-5 pb-5 mx-2 lg:mx-10">
-        <div className="container rounded bg-gray-200 flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-16">
+        <div className="container rounded bg-gray-300 flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-16">
           <div className="w-full mb-6 lg:w-1/3 lg:max-w-lg md:w-1/2">
             <img
               className="object-cover object-center rounded"
@@ -25,7 +25,7 @@ const Subject = ({ subject }) => {
                 <div className="mr-1 bg-cyan-500 rounded">
                   <div className="place-items-center">
                     <div className="text-3xl text-white font-bold">40</div>
-                    <div className="text-gray-300">Notes</div>
+                    <div className="text-gray-200">Notes</div>
                   </div>
                 </div>
                 <div className="mr-1 mt-1 items-center text-center justify-center justify-items-center bg-cyan-500 rounded">
@@ -55,7 +55,7 @@ const Subject = ({ subject }) => {
                 <div className="mr-1 bg-indigo-500 rounded">
                   <div className="place-items-center">
                     <div className="text-3xl text-white font-bold">40</div>
-                    <div className="text-gray-300">Examples</div>
+                    <div className="text-gray-200">Examples</div>
                   </div>
                 </div>
                 <div className="mr-1 mt-1 items-center text-center justify-center justify-items-center bg-indigo-500 rounded">
@@ -85,7 +85,7 @@ const Subject = ({ subject }) => {
                 <div className="mr-1 bg-yellow-500 rounded">
                   <div className="place-items-center">
                     <div className="text-3xl text-white font-bold">40</div>
-                    <div className="text-gray-300">Books</div>
+                    <div className="text-gray-200">Books</div>
                   </div>
                 </div>
                 <div className="mr-1 mt-1 items-center text-center justify-center justify-items-center bg-yellow-500 rounded">

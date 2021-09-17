@@ -17,7 +17,11 @@ const Seo = ({
       <title>CHEMCASTS{title ? "::" + title : ""}</title>
       <meta
         name="description"
-        content={description ? description : "Put your description here."}
+        content={
+          description
+            ? description
+            : "Digital library and commuity portal for chemical engineers."
+        }
       />
       <meta name="robots" content="index, follow" />
       <meta name="twitter:site" content="@CHEMCASTS_" />

@@ -17,7 +17,7 @@ const data = [
     name: "legal",
     links: [
       { name: "Legal", href: "/legal" },
-      { name: "Policy", href: "/legal/policy" },
+      { name: "Policy", href: "/legal/privacy-policy" },
       { name: "Terms of Service", href: "/legal/terms-of-service" },
       { name: "Terms Of Use", href: "/legal/terms-of-use" },
     ],
@@ -25,11 +25,11 @@ const data = [
   {
     name: "company",
     links: [
-      { name: "Chemcasts", href: "/chemcasts" },
-      { name: "About Us", href: "/chemcasts/about" },
-      { name: "Partners", href: "/chemcasts/partners" },
-      { name: "Advertising", href: "/chemcasts/advertising" },
-      { name: "Contact", href: "/chemcasts/contact" },
+      { name: "Company", href: "/company" },
+      { name: "About Us", href: "/company/about" },
+      { name: "Partners", href: "/company/partners" },
+      { name: "Advertising", href: "/company/advertising" },
+      { name: "Contact", href: "/company/contact" },
     ],
   },
 ];
@@ -55,7 +55,8 @@ const Footer = () => {
             <div className="flex flex-wrap">
               <a
                 href="https://www.twitter.com/CHEMCASTS_"
-                rel="noopener"
+                target="_blank"
+                rel="noreferrer noopener"
                 className="hover:bg-gray-500 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-700 rounded-sm shadow"
               >
                 <Twitter height="24" width="24" />
@@ -64,8 +65,9 @@ const Footer = () => {
                 </p>
               </a>
               <a
-                href="https://www.facebook.com/laravelnews"
-                rel="noopener"
+                href="https://www.linkedin.com/company/chemcasts"
+                target="_blank"
+                rel="noreferrer noopener"
                 className="hover:bg-gray-500 inline-flex items-center px-4 py-3 mb-2 mr-2 transition-colors duration-200 ease-in bg-gray-700 rounded-sm shadow"
               >
                 <Linkedin height="24" width="24" />

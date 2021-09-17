@@ -173,7 +173,7 @@ const Navbar = () => {
             <div className="flex flex-col justify-center w-3/4">
               <div className="flex justify-center my-6 space-x-8">
                 <a
-                  href="https://twitter.com/laravelnews"
+                  href="https://www.twitter.com/CHEMCASTS_"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="hover:rotate-12 transition-transform duration-100 ease-linear transform"
@@ -182,7 +182,7 @@ const Navbar = () => {
                   <Twitter height="48" width="48" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/laravel-news"
+                  href="https://www.linkedin.com/company/chemcasts"
                   target="_blank"
                   rel="noreferrer noopener"
                   className="hover:rotate-12 transition-transform duration-100 ease-linear transform"
