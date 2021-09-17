@@ -20,23 +20,18 @@ const index = ({ subjects, URL }) => {
         <div className="flex pt-10 flex-col items-start px-5 py-3 mx-auto md:flex-row lg:px-28">
           <h1 className="text-5xl font-content font-white tracking-wide md:text-7xl title-font">
             {" "}
-            Subjects{" "}
+            Learn{" "}
           </h1>
         </div>
         <div className="flex flex-col items-center px-5 py-10 mx-auto md:flex-row lg:px-28">
           <div className="flex flex-col items-start mb-16 text-left lg:flex-grow lg:pr-24 md:pr-16 md:mb-0">
-            <h2 className="mb-8 text-x font-semibold tracking-widest uppercase title-font">
+            <h2 className="mb-5 text-3xl font-white tracking-tighter md:text-5xl title-font">
               {" "}
-              Your long length tagline hey chemicos{" "}
+              Read, Solve, Explore{" "}
             </h2>
-            <h1 className="mb-5 text-3xl font-white tracking-tighter md:text-5xl title-font">
-              {" "}
-              Medium length display headline.{" "}
-            </h1>
             <p className="mb-8 text-x leading-relaxed text-left">
               {" "}
-              Deploy your mvp in minutes, not days. WT offers you a a wide
-              selection swapable sections for your landing page.{" "}
+              Understand concepts,Solve given examples, Read recommended books. {" "}
             </p>
           </div>
         </div>

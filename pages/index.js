@@ -74,7 +74,7 @@ export default function Home({ URL }) {
                       engineering topic and concept easily. Make your
                       fundamentals strong.{" "}
                     </p>
-                    <Link href="/learn/notes">
+                    <Link href="/learn">
                       <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
                         {" "}
                         Read{" "}
