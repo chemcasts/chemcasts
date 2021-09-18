@@ -1,4 +1,3 @@
-import Logo from "../components/Logo";
 import Link from "next/link";
 import Twitter from "@/comp/Icons/Twitter";
 import Linkedin from "@/comp/Icons/Linkedin";

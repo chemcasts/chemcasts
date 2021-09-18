@@ -16,7 +16,7 @@ const index = ({ subjects, URL }) => {
         ogDescription=""
         ogUrl={URL}
       />
-      <header className="text-white bg-black">
+      <header className="text-white bg-gray-900">
         <div className="flex pt-10 flex-col items-start px-5 py-3 mx-auto md:flex-row lg:px-28">
           <h1 className="text-5xl font-content font-white tracking-wide md:text-7xl title-font">
             {" "}

@@ -13,7 +13,7 @@ export default function Home({ URL }) {
         ogDescription="Digital library and commuity portal for chemical engineers."
         ogUrl={URL}
       />
-      <header className="text-white bg-black">
+      <header className="text-white bg-gray-900">
         <div className="flex pt-10 flex-col items-start px-5 py-3 mx-auto md:flex-row lg:px-28">
           <h1 className="text-5xl font-content text-brand tracking-tighter md:text-7xl">
             {" "}
@@ -28,7 +28,10 @@ export default function Home({ URL }) {
               <span className="rounded font-bold text-5xl md:text-6xl text-brand-600 transform rotate-2">
                 quimico
               </span>{" "}
-              community portal{" "}
+              <br />
+              community
+              <br />
+              portal{" "}
             </h1>
             <p className="mb-8 text-lg leading-relaxed text-left">
               {" "}

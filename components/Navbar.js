@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Logo from "./Logo";
 import React from "react";
 import Twitter from "@/comp/Icons/Twitter";
 import Linkedin from "@/comp/Icons/Linkedin";
