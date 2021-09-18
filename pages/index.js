@@ -105,7 +105,7 @@ export default function Home({ URL }) {
                       sharpen your concept and enhance your problem-solving
                       ability.{" "}
                     </p>
-                    <Link href="/learn/examples">
+                    <Link href="/learn">
                       <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
                         {" "}
                         Solve{" "}

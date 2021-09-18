@@ -11,6 +11,11 @@ const GET_SUBJECTS = gql`
         url
         alternativeText
       }
+      Chapters{
+        Notes{
+          id
+        }
+      }
     }
   }
 `;

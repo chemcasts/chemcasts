@@ -5,6 +5,7 @@
         "@/*": ["/*"],
         "@/comp/*": ["components/*"],
         "@/query/*": ["queries/*"],
+        "@/help/*": ["helpers/*"],
       }
     }
   }

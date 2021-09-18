@@ -1,6 +1,17 @@
 import Link from "next/link";
+import NumberFormatter from "@/help/NumberFormatter";
 
 const Subject = ({ subject }) => {
+  var notes = 0;
+  if (Object.entries(subject.Chapters).length != 0) {
+    subject.Chapters.map((Chapter) => {
+      Chapter.Notes.map((Note) => {
+        notes++;
+      });
+    });
+  }
+  const notesCount = NumberFormatter(notes);
+
   return (
     <>
       <section id={subject.id} className="pt-5 pb-5 mx-2 lg:mx-10">
@@ -24,12 +35,12 @@ const Subject = ({ subject }) => {
               <div className="items-center text-center my-2 px-1 w-1/3 overflow-hidden sm:my-1 sm:px-1 sm:w-1/3 md:my-1 md:px-1 md:w-1/3 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
                 <div className="mr-1 bg-cyan-500 rounded">
                   <div className="place-items-center">
-                    <div className="text-3xl text-white font-bold">40</div>
+                    <div className="text-3xl text-white font-bold">{notesCount}</div>
                     <div className="text-gray-200">Notes</div>
                   </div>
                 </div>
                 <div className="mr-1 mt-1 items-center text-center justify-center justify-items-center bg-cyan-500 rounded">
-                  <Link href="#">
+                  <Link href={"/learn/" + subject.Slug}>
                     <a className="hover:opacity-70">
                       <div className="text-white py-1 items-center">
                         <svg
