@@ -23,14 +23,7 @@ const Navbar = () => {
         <div className="md:hidden z-48 flex items-center justify-between">
           <Link href="/">
             <a className="flex items-center" aria-label="Home">
-              <img
-                src="/logo.svg"
-                className="w-12 h-12"
-                alt="CHEMCASTS"
-              />
-              <p className="font-display text-brand-500 ml-2 mr-4 text-xl font-bold leading-normal">
-                CHEMCASTS
-              </p>
+              <img src="/logo/logo.svg" className="w-12 h-12" alt="CHEMCASTS" />
             </a>
           </Link>
           <div className="flex -mr-2">
@@ -61,13 +54,10 @@ const Navbar = () => {
             <Link href="/">
               <a className="flex items-center mr-5" aria-label="Home">
                 <img
-                  src="/logo.svg"
+                  src="/logo/logo.svg"
                   className="w-12 h-12"
                   alt="CHEMCASTS"
                 />
-                <p className="font-display sm:hidden lg:inline-block text-brand-500 ml-2 mr-4 text-xl font-bold leading-normal">
-                  CHEMCASTS
-                </p>
               </a>
             </Link>
             {data.map((link) => (
@@ -126,13 +116,10 @@ const Navbar = () => {
             <div className="pt-8 mb-6">
               <a className="flex items-center" href="/" aria-label="Home">
                 <img
-                  src="/logo.svg"
+                  src="/logo/logo.svg"
                   className="w-12 h-12"
                   alt="CHEMCASTS"
                 />
-                <p className="font-display text-brand-500 ml-2 text-xl font-bold leading-normal">
-                  CHEMCASTS
-                </p>
               </a>
             </div>
             <div className="">

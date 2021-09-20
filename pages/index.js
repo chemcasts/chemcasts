@@ -16,8 +16,7 @@ export default function Home({ URL }) {
       <header className="text-white bg-gray-900">
         <div className="flex pt-10 flex-col items-start px-5 py-3 mx-auto md:flex-row lg:px-28">
           <h1 className="text-5xl font-content text-brand tracking-tighter md:text-7xl">
-            {" "}
-            CHEMCASTS{" "}
+            <img src="/logo/brand.svg" />
           </h1>
         </div>
         <div className="flex flex-col items-center px-5 py-10 mx-auto md:flex-row lg:px-28">
@@ -41,9 +40,11 @@ export default function Home({ URL }) {
             </p>
             <div className="flex flex-col justify-center lg:flex-row">
               <Link href="/learn">
-                <button className="bg-brand rounded text-white hover:text-gray-300 focus:outline-none px-3 h-12 w-full">
-                  <span className="font-bold text-xl"> Get Strated </span>
-                </button>
+                <a>
+                  <button className="bg-brand rounded text-white hover:text-gray-300 focus:outline-none px-3 h-12 w-full">
+                    <span className="font-bold text-xl"> Get Strated </span>
+                  </button>
+                </a>
               </Link>
             </div>
           </div>
@@ -78,10 +79,12 @@ export default function Home({ URL }) {
                       fundamentals strong.{" "}
                     </p>
                     <Link href="/learn">
-                      <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
-                        {" "}
-                        Read{" "}
-                      </button>
+                      <a>
+                        <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
+                          {" "}
+                          Read{" "}
+                        </button>
+                      </a>
                     </Link>
                   </div>
                 </div>
@@ -106,10 +109,12 @@ export default function Home({ URL }) {
                       ability.{" "}
                     </p>
                     <Link href="/learn">
-                      <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
-                        {" "}
-                        Solve{" "}
-                      </button>
+                      <a>
+                        <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
+                          {" "}
+                          Solve{" "}
+                        </button>
+                      </a>
                     </Link>
                   </div>
                 </div>
@@ -134,10 +139,12 @@ export default function Home({ URL }) {
                       success.{" "}
                     </p>
                     <Link href="/learn/books">
-                      <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
-                        {" "}
-                        Explore{" "}
-                      </button>
+                      <a>
+                        <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
+                          {" "}
+                          Explore{" "}
+                        </button>
+                      </a>
                     </Link>
                   </div>
                 </div>
