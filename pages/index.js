@@ -36,7 +36,8 @@ export default function Home({ URL }) {
               {" "}
               Digital library and commuity portal for
               <strong className="tracking-wider uppercase"> chemical </strong>
-              engineers.{" "}
+              engineers. Online chemical engineering learning resources and
+              collaboration platform.{" "}
             </p>
             <div className="flex flex-col justify-center lg:flex-row">
               <Link href="/learn">
@@ -138,7 +139,7 @@ export default function Home({ URL }) {
                       Going beyond the surface of a subject is essential to
                       success.{" "}
                     </p>
-                    <Link href="/learn/books">
+                    <Link href="/learn">
                       <a>
                         <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
                           {" "}

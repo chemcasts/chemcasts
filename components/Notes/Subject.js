@@ -37,7 +37,7 @@ const Subject = ({ subject }) => {
             />
           </div>
           <div className="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
-            <h1 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-left text-brand title-font">
+            <h1 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-left text-brand hover:border-b-4 hover:border-brand-600 title-font">
               {subject.Name}
             </h1>
             <p className="mb-8 line-clamp-3 lg:line-clamp-5 text-base leading-relaxed text-left  ">
@@ -86,7 +86,7 @@ const Subject = ({ subject }) => {
                   </div>
                 </div>
                 <div className="mr-1 mt-1 items-center text-center justify-center justify-items-center bg-indigo-500 rounded">
-                  <Link href="#">
+                  <Link href={"/learn/" + subject.Slug + "/examples"}>
                     <a className="hover:opacity-70">
                       <div className="text-white py-1 items-center">
                         <svg
@@ -118,7 +118,7 @@ const Subject = ({ subject }) => {
                   </div>
                 </div>
                 <div className="mr-1 mt-1 items-center text-center justify-center justify-items-center bg-yellow-500 rounded">
-                  <Link href="#">
+                  <Link href={"/learn/" + subject.Slug + "/books"}>
                     <a className="hover:opacity-70">
                       <div className="text-white py-1 items-center">
                         <svg
