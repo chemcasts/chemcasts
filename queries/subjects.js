@@ -1,4 +1,4 @@
-import {gql} from "@apollo/client";
+import { gql } from "@apollo/client";
 
 const GET_SUBJECTS = gql`
   query allsubject {
@@ -11,8 +11,14 @@ const GET_SUBJECTS = gql`
         url
         alternativeText
       }
-      Chapters{
-        Notes{
+      Books {
+        id
+      }
+      Chapters {
+        Examples {
+          id
+        }
+        Notes {
           id
         }
       }

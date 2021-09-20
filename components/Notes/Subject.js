@@ -3,14 +3,26 @@ import NumberFormatter from "@/help/NumberFormatter";
 
 const Subject = ({ subject }) => {
   var notes = 0;
+  var examples = 0;
+  var books = 0;
   if (Object.entries(subject.Chapters).length != 0) {
     subject.Chapters.map((Chapter) => {
+      Chapter.Examples.map((Example) => {
+        examples++;
+      });
       Chapter.Notes.map((Note) => {
         notes++;
       });
     });
   }
+  if (Object.entries(subject.Books).length != 0) {
+    subject.Books.map((Book) => {
+      books++;
+    });
+  }
   const notesCount = NumberFormatter(notes);
+  const examplesCount = NumberFormatter(examples);
+  const booksCount = NumberFormatter(books);
 
   return (
     <>
@@ -35,7 +47,9 @@ const Subject = ({ subject }) => {
               <div className="items-center text-center my-2 px-1 w-1/3 overflow-hidden sm:my-1 sm:px-1 sm:w-1/3 md:my-1 md:px-1 md:w-1/3 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
                 <div className="mr-1 bg-cyan-500 rounded">
                   <div className="place-items-center">
-                    <div className="text-3xl text-white font-bold">{notesCount}</div>
+                    <div className="text-3xl text-white font-bold">
+                      {notesCount}
+                    </div>
                     <div className="text-gray-200">Notes</div>
                   </div>
                 </div>
@@ -65,7 +79,9 @@ const Subject = ({ subject }) => {
               <div className="items-center text-center my-2 px-1 w-1/3 overflow-hidden sm:my-1 sm:px-1 sm:w-1/3 md:my-1 md:px-1 md:w-1/3 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
                 <div className="mr-1 bg-indigo-500 rounded">
                   <div className="place-items-center">
-                    <div className="text-3xl text-white font-bold">40</div>
+                    <div className="text-3xl text-white font-bold">
+                      {examplesCount}
+                    </div>
                     <div className="text-gray-200">Examples</div>
                   </div>
                 </div>
@@ -95,7 +111,9 @@ const Subject = ({ subject }) => {
               <div className="items-center text-center my-2 px-1 w-1/3 overflow-hidden sm:my-1 sm:px-1 sm:w-1/3 md:my-1 md:px-1 md:w-1/3 lg:my-1 lg:px-1 lg:w-1/3 xl:my-1 xl:px-1 xl:w-1/3">
                 <div className="mr-1 bg-yellow-500 rounded">
                   <div className="place-items-center">
-                    <div className="text-3xl text-white font-bold">40</div>
+                    <div className="text-3xl text-white font-bold">
+                      {booksCount}
+                    </div>
                     <div className="text-gray-200">Books</div>
                   </div>
                 </div>
