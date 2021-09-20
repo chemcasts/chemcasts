@@ -11,6 +11,7 @@ const GET_NOTE = gql`
         id
         Name
         Slug
+        Description
         Subject {
           id
           Name

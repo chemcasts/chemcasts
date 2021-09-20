@@ -38,7 +38,7 @@ const index = ({ subject, URL }) => {
   return (
     <>
       <Seo
-        title={subject.Name}
+        title={subject.Name+"::Notes"}
         description={subject.Description}
         twTitle={subject.Name}
         twDescription={subject.Description}
@@ -49,22 +49,26 @@ const index = ({ subject, URL }) => {
         ogUrl={URL}
         canonical={URL}
       />
-      <header className="text-white bg-gray-900">
-        <div className="flex flex-col items-center px-5 py-10 mx-auto md:flex-row lg:px-28">
-          <div className="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
-            <h1 className="mb-5 text-3xl font-white tracking-tighter md:text-5xl title-font">
-              {subject.Name}
-            </h1>
-            <p className="mb-8 text-x leading-relaxed text-left">
-              {subject.Description}
-            </p>
-          </div>
-          <div className="w-full lg:w-1/2 lg:max-w-lg md:w-1/2">
+      <header className="bg-gray-900">
+        <div className="container flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-16">
+          <div className="w-full mb-6 lg:w-1/3 lg:max-w-lg md:w-1/2">
             <img
-              className="object-cover object-center rounded-lg "
-              alt="hero"
+              className="object-cover object-center rounded"
+              alt={subject.Name}
+              loading="lazy"
               src={subject.Image.url}
             />
+          </div>
+          <div className="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
+            <h2 className="mb-5 rounded px-2 bg-cyan-100 text-2xl font-white tracking-wider text-cyan-500 md:text-4xl title-font">
+              Notes
+            </h2>
+            <h1 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-left text-white title-font">
+              {subject.Name}
+            </h1>
+            <p className="mb-8 line-clamp-3 lg:line-clamp-5 text-white text-base leading-relaxed text-left  ">
+              {subject.Description}
+            </p>
           </div>
         </div>
       </header>
@@ -104,7 +108,11 @@ const index = ({ subject, URL }) => {
         ) : (
           <>
             {subject.Chapters.map((chapter) => (
-              <Chapter key={chapter.id} chapter={chapter} subjectSlug={subject.Slug} />
+              <Chapter
+                key={chapter.id}
+                chapter={chapter}
+                subjectSlug={subject.Slug}
+              />
             ))}
           </>
         )}
@@ -126,7 +134,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const slug = params.subject;
-  const URL = process.env.APP_URL + "/learn/" + slug+"/notes";
+  const URL = process.env.APP_URL + "/learn/" + slug + "/notes";
   const data = await client.query({
     query: GET_SUBJECT,
     variables: { slug: slug },

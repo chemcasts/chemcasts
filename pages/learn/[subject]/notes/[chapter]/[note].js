@@ -4,8 +4,9 @@ import GET_NOTE from "@/query/note";
 import GET_NOTES_PATHS from "@/query/notesPaths";
 import { useRouter } from "next/router";
 import Note from "@/comp/Notes/Note";
+import Seo from "@/comp/Seo";
 
-const NotePage = ({ note }) => {
+const NotePage = ({ note, URL }) => {
   const router = useRouter();
   if (router.isFallback) {
     return (
@@ -36,6 +37,15 @@ const NotePage = ({ note }) => {
 
   return (
     <>
+      <Seo
+        title={note.Chapter.Name + "::" + note.Name}
+        description={note.Chapter.Description}
+        twTitle={note.Chapter.Name + "::" + note.Name}
+        twDescription={note.Chapter.Description}
+        ogTitle={note.Chapter.Name + "::" + note.Name}
+        ogDescription={note.Chapter.Description}
+        ogUrl={URL}
+      />
       <div className="w-full max-w-8xl mx-auto">
         <div className="container lg:flex">
           <Drawer
@@ -82,9 +92,9 @@ export async function getStaticProps({ params }) {
   const slug = params.note;
   const URL =
     process.env.APP_URL +
-    "/notes/" +
+    "/learn/" +
     params.subject +
-    "/" +
+    "/notes/" +
     params.chapter +
     "/" +
     params.note;
@@ -101,7 +111,7 @@ export async function getStaticProps({ params }) {
 
   const note = data.data.notes[0];
   return {
-    props: { note },
+    props: { note, URL },
     revalidate: 10,
   };
 }

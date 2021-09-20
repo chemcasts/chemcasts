@@ -38,7 +38,7 @@ const index = ({ subject, URL }) => {
   return (
     <>
       <Seo
-        title={subject.Name}
+        title={subject.Name + "::Notes"}
         description={subject.Description}
         twTitle={subject.Name}
         twDescription={subject.Description}
@@ -104,7 +104,11 @@ const index = ({ subject, URL }) => {
         ) : (
           <>
             {subject.Chapters.map((chapter) => (
-              <Chapter key={chapter.id} chapter={chapter} subjectSlug={subject.Slug} />
+              <Chapter
+                key={chapter.id}
+                chapter={chapter}
+                subjectSlug={subject.Slug}
+              />
             ))}
           </>
         )}

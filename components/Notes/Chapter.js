@@ -4,7 +4,7 @@ const Chapter = ({ chapter, subjectSlug }) => {
   return (
     <>
       <section id={chapter.id} className="text-blueGray-700 py-5">
-        <div className="container rounded-lg bg-white lg:w-2/3 shadow-xl flex flex-col items-center px-5 py-6 mx-auto">
+        <div className="rounded-lg bg-white lg:w-2/3 md:w-4/5 w-11/12 shadow-xl flex flex-col items-center px-5 py-6 mx-auto">
           <Link href={"/learn/" + subjectSlug + "/notes/" + chapter.Slug}>
             <a className="w-full">
               <div className="flex flex-col w-full mb-6 text-left ">
