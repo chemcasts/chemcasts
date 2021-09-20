@@ -54,7 +54,7 @@ const Subject = ({ subject }) => {
                   </div>
                 </div>
                 <div className="mr-1 mt-1 items-center text-center justify-center justify-items-center bg-cyan-500 rounded">
-                  <Link href={"/learn/" + subject.Slug}>
+                  <Link href={"/learn/" + subject.Slug + "/notes"}>
                     <a className="hover:opacity-70">
                       <div className="text-white py-1 items-center">
                         <svg

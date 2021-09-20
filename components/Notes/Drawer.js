@@ -34,7 +34,7 @@ const Drawer = ({ links, activeLink, base }) => {
                             (activeLink === link.Slug
                               ? "rounded bg-cyan-50 "
                               : "hover:rounded hover:bg-cyan-50 ") +
-                            "px-3 py-2 transition-colors duration-200 relative block hover:text-brand-400 text-brand"
+                            "px-3 py-2 pr-2 transition-colors duration-200 relative block hover:text-brand-400 text-brand"
                           }
                         >
                           <span className="relative text-xl">{link.Name}</span>

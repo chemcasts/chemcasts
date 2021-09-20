@@ -126,7 +126,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const slug = params.subject;
-  const URL = process.env.APP_URL + "/notes/" + slug;
+  const URL = process.env.APP_URL + "/learn/" + slug+"/notes";
   const data = await client.query({
     query: GET_SUBJECT,
     variables: { slug: slug },

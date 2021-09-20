@@ -78,7 +78,7 @@ const index = ({ chapter, note, URL }) => {
           <Drawer
             links={chapter.Notes}
             activeLink={note.Slug}
-            base={"/notes/" + chapter.Subject.Slug + "/" + chapter.Slug}
+            base={"/learn/" + chapter.Subject.Slug + "/notes/" + chapter.Slug}
           />
           <Note
             note={note}

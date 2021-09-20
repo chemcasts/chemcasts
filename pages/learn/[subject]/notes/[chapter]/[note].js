@@ -42,7 +42,10 @@ const NotePage = ({ note }) => {
             links={note.Chapter.Notes}
             activeLink={note.Slug}
             base={
-              "/notes/" + note.Chapter.Subject.Slug + "/" + note.Chapter.Slug
+              "/learn/" +
+              note.Chapter.Subject.Slug +
+              "/notes/" +
+              note.Chapter.Slug
             }
           />
           <Note

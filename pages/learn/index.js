@@ -29,10 +29,6 @@ const index = ({ subjects, URL }) => {
               {" "}
               Read, Solve, Explore{" "}
             </h2>
-            <p className="mb-8 text-x leading-relaxed text-left">
-              {" "}
-              Understand concepts,Solve given examples, Read recommended books. {" "}
-            </p>
           </div>
         </div>
       </header>
