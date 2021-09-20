@@ -43,10 +43,9 @@ const Footer = () => {
               World wide quimico community
             </p>
             <div className="flex flex-wrap items-center">
-              <img src="/logo/logo.svg" className="w-12 h-12 mr-1" alt="CHEMCASTS" />
               <img
-                src="/logo/brand.svg"
-                className="w-48 h-12"
+                src="/logo/logo-brand-flat.svg"
+                className="h-12 w-56 mr-1"
                 alt="CHEMCASTS"
               />
             </div>
