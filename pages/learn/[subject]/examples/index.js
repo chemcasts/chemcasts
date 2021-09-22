@@ -4,7 +4,7 @@ import GET_SUBJECTS_PATHS from "@/query/subjectsPaths";
 import Router from "next/router";
 import Seo from "@/comp/Seo";
 import { useRouter } from "next/router";
-import Chapter from "@/comp/Notes/Chapter";
+import Chapter from "@/comp/Examples/Chapter";
 
 const index = ({ subject, URL }) => {
   const router = useRouter();

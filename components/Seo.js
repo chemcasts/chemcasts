@@ -14,7 +14,7 @@ const Seo = ({
 }) => {
   return (
     <Head>
-      <title>CHEMCASTS{title ? "::" + title : ""}</title>
+      <title>{title ? title+' - Chemcasts' : "Chemcasts"}</title>
       <meta
         name="description"
         content={
