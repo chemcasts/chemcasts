@@ -51,6 +51,6 @@ export async function getStaticProps(context) {
 
   return {
     props: { subjects, URL },
-    revalidate: 10,
+    revalidate: 120,
   };
 }

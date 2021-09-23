@@ -118,6 +118,6 @@ export async function getStaticProps({ params }) {
   const note = data.data.notes[0];
   return {
     props: { note, URL },
-    revalidate: 10,
+    revalidate: 120,
   };
 }

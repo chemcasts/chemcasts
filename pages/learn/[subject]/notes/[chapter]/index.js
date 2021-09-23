@@ -159,6 +159,6 @@ export async function getStaticProps({ params }) {
   }
   return {
     props: { chapter, note, URL, canURL },
-    revalidate: 10,
+    revalidate: 120,
   };
 }

@@ -38,7 +38,7 @@ const index = ({ subject, URL }) => {
   return (
     <>
       <Seo
-        title={subject.Name+"::Notes"}
+        title={subject.Name + "::Notes"}
         description={subject.Description}
         twTitle={subject.Name}
         twDescription={subject.Description}
@@ -150,6 +150,6 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { subject, URL },
-    revalidate: 10,
+    revalidate: 120,
   };
 }

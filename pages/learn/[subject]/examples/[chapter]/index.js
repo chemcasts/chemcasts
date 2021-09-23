@@ -152,6 +152,6 @@ export async function getStaticProps({ params }) {
   }
   return {
     props: { chapter, examples, URL, subjectSlug: params.subject },
-    revalidate: 10,
+    revalidate: 120,
   };
 }
