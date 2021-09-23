@@ -90,6 +90,9 @@ const index = ({ chapter, note, URL, canURL }) => {
                 base={
                   "/learn/" + chapter.Subject.Slug + "/notes/" + chapter.Slug
                 }
+                examplesLink={
+                  "/learn/" + chapter.Subject.Slug + "/examples/" + chapter.Slug
+                }
               />
               <Note
                 note={note}

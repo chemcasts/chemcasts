@@ -1,13 +1,11 @@
-import Drawer from "@/comp/Notes/Drawer";
 import client from "apolloClient";
-import GET_CHAPTER from "@/query/chapter";
+import GET_EXAMPLE from "@/query/example";
 import GET_EXAMPLES_PATHS from "@/query/examplesPaths";
 import { useRouter } from "next/router";
-import Router from "next/router";
-import Note from "@/comp/Notes/Note";
 import Seo from "@/comp/Seo";
+import Markdown from "@/comp/Markdown";
 
-const ExamplePage = ({ chapter, note, URL, canURL }) => {
+const ExamplePage = ({ example, URL }) => {
   const router = useRouter();
   if (router.isFallback) {
     return (
@@ -39,14 +37,13 @@ const ExamplePage = ({ chapter, note, URL, canURL }) => {
   return (
     <>
       <Seo
-        title={chapter.Name + "::" + note.Name}
-        description={chapter.Description}
-        twTitle={chapter.Name + "::" + note.Name}
-        twDescription={chapter.Description}
-        ogTitle={chapter.Name + "::" + note.Name}
-        ogDescription={chapter.Description}
+        title={example.Chapter.Name + "::"}
+        description={example.Chapter.Description}
+        twTitle={example.Chapter.Name + "::"}
+        twDescription={example.Chapter.Description}
+        ogTitle={example.Chapter.Name + "::"}
+        ogDescription={example.Chapter.Description}
         ogUrl={URL}
-        canonical={canURL}
       />
       <header className="text-white bg-gray-900">
         <div className="flex flex-col items-center px-5 py-5 mx-auto md:flex-row lg:px-28">
@@ -55,62 +52,35 @@ const ExamplePage = ({ chapter, note, URL, canURL }) => {
               Examples
             </h2>
             <h1 className="mb-5 text-3xl font-white tracking-tighter md:text-5xl title-font">
-              {chapter.Name}
+              {example.Chapter.Name}
             </h1>
             <p className="mb-2 text-x leading-relaxed text-left">
-              {chapter.Description}
+              {example.Chapter.Description}
             </p>
           </div>
         </div>
       </header>
-      {Object.entries(note).length === 0 ? (
-        <>
-          <section className="pt-10 pb-10 bg-gray-500">
-            <div className="container rounded bg-gray-200 flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-28">
-              <div className="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2">
-                <img
-                  className="object-cover object-center rounded"
-                  alt="It's empty Here"
-                  loading="lazy"
-                  src="/svg/empty.svg"
-                />
-              </div>
-              <div className="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
-                <h1 className="mb-8 text-3xl font-bold tracking-tighter text-left text-black lg:text-5xl title-font">
-                  Empty
-                </h1>
-                <p className="mb-8 text-xl leading-relaxed text-left  ">
-                  Nothing to read here yet.Notes are availabale soon.....
-                </p>
-                <div className="flex flex-col justify-left lg:flex-row">
-                  <button
-                    onClick={() => Router.back()}
-                    className="flex items-center px-6 py-2 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-brand rounded hover:bg-brand-700 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2"
-                  >
-                    {" "}
-                    Go Back{" "}
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
-        </>
-      ) : (
-        <>
-          <div className="w-full max-w-8xl mx-auto">
-            <div className="container lg:flex">
-              <Note
-                note={note}
-                subject={{
-                  Name: chapter.Subject.Name,
-                  Slug: chapter.Subject.Slug,
-                }}
-                chapter={{ Name: chapter.Name, Slug: chapter.Slug }}
-              />
-            </div>
+      <div className="w-full lg:px-28 bg-gray-500 max-w-8xl">
+        <div className="rounded px-2 py-3">
+          <span className="text-indigo-500 font-bold text-3xl px-1 rounded rounded-b-none bg-indigo-100">
+            Problem
+          </span>
+          <span className="text-indigo-500 ml-3 px-1 text-3xl rounded rounded-b-none bg-indigo-100 font-bold">
+            Level:{example.Level}{" "}
+          </span>
+          <div className="prose px-2 py-3 lg:prose-lg bg-gray-50 rounded rounded-tl-none">
+            <Markdown markdown={example.Problem} />
           </div>
-        </>
-      )}
+        </div>
+        <div className="rounded px-2 py-2">
+          <span className="text-indigo-500 font-bold text-3xl px-1 rounded rounded-b-none bg-indigo-100">
+            Solution
+          </span>
+          <div className="bg-white px-2 py-3 rounded rounded-tl-none prose lg:prose-lg">
+            <Markdown markdown={example.Solution} />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
@@ -132,42 +102,30 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  let note;
-  const slug = params.chapter;
-  const noteSlug = "introduction-" + slug;
+  const slug = params.example;
   const URL =
     process.env.APP_URL +
     "/learn/" +
     params.subject +
-    "/notes/" +
-    params.chapter;
-  const canURL =
-    process.env.APP_URL +
-    "/learn/" +
-    params.subject +
-    "/notes/" +
+    "/examples/" +
     params.chapter +
-    "/introduction-" +
-    params.chapter;
+    "/" +
+    params.example;
   const data = await client.query({
-    query: GET_CHAPTER,
-    variables: { slug: slug, note: noteSlug },
+    query: GET_EXAMPLE,
+    variables: { slug: slug },
   });
 
-  if (Object.entries(data.data.chapters).length === 0) {
+  if (Object.entries(data.data.examples).length === 0) {
     return {
       notFound: true,
     };
   }
 
-  const chapter = data.data.chapters[0];
-  if (Object.entries(data.data.notes).length === 0) {
-    note = [];
-  } else {
-    note = data.data.notes[0];
-  }
+  const example = data.data.examples[0];
+
   return {
-    props: { chapter, note, URL, canURL },
+    props: { example, URL },
     revalidate: 10,
   };
 }

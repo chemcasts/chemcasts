@@ -57,6 +57,12 @@ const NotePage = ({ note, URL }) => {
               "/notes/" +
               note.Chapter.Slug
             }
+            examplesLink={
+              "/learn/" +
+              note.Chapter.Subject.Slug +
+              "/examples/" +
+              note.Chapter.Slug
+            }
           />
           <Note
             note={note}

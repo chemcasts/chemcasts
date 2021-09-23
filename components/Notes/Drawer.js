@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Drawer = ({ links, activeLink, base }) => {
+const Drawer = ({ links, activeLink, base, examplesLink }) => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
   return (
     <>
@@ -42,6 +42,13 @@ const Drawer = ({ links, activeLink, base }) => {
                       </Link>
                     </li>
                   ))}
+                  <li className="mt-1">
+                    <Link href={examplesLink}>
+                      <a className="hover:rounded hover:bg-indigo-200 px-3 py-2 pr-2 transition-colors duration-200 relative block hover:text-indigo-600 text-indigo-500">
+                        <span className="relative text-xl">Examples</span>
+                      </a>
+                    </Link>
+                  </li>
                 </ul>
               </li>
             </ul>

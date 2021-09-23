@@ -5,7 +5,7 @@ const Example = ({ example, chapterSlug, subjectSlug }) => {
     <>
       <section
         id={example.id}
-        className="text-blueGray-700 bg-gray-300 py-5 px-3"
+        className="text-blueGray-700 bg-gray-500 py-5 px-3"
       >
         <div className="rounded-lg bg-white w-full lg:w-5/6 shadow-xl flex flex-col items-center px-5 py-6 mx-auto">
           <Link
