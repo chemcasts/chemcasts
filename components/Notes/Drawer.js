@@ -30,6 +30,7 @@ const Drawer = ({ links, activeLink, base, examplesLink }) => {
                     <li className="mt-1" key={link.id}>
                       <Link href={base + "/" + link.Slug}>
                         <a
+                          onClick={() => setDrawerOpen(!drawerOpen)}
                           className={
                             (activeLink === link.Slug
                               ? "rounded bg-cyan-50 "

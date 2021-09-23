@@ -4,7 +4,7 @@ const Book = ({ book }) => {
   return (
     <>
       <section id={book.id} className="pt-5 pb-5 mx-2 lg:mx-10">
-        <div className="container rounded bg-gray-100 flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-16">
+        <div className="container rounded bg-gray-100 flex flex-col px-5 pt-5 mx-auto lg:items-center md:flex-row lg:px-16">
           <div className="w-full mb-6 lg:w-1/3 lg:max-w-lg md:w-1/2">
             <img
               className="object-cover object-center rounded"
