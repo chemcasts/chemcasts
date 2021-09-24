@@ -1,6 +1,8 @@
 import Head from "next/head";
+import { useRouter } from 'next/router'
 
-const APP_URL = process.env.APP_URL;
+const baseImage = process.env.NEXT_PUBLIC_APP_URL+'/logo/logo-brand.png';
+
 const defaultDescription =
   "Digital library and commuity portal for chemical engineers. Online chemical engineering learning resources and collaboration platform.";
 const Seo = ({
@@ -32,7 +34,7 @@ const Seo = ({
       />
       <meta
         name="twitter:image"
-        content={twImage ? twImage : APP_URL + "/logo/logo-brand.png"}
+        content={twImage ? twImage : baseImage}
       />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={ogTitle ? ogTitle : "CHEMCASTS"} />
@@ -42,7 +44,7 @@ const Seo = ({
       />
       <meta
         property="og:image"
-        content={ogImage ? ogImage : APP_URL + "/logo/logo-brand.png"}
+        content={ogImage ? ogImage : baseImage}
       />
       {ogUrl ? (
         <>
