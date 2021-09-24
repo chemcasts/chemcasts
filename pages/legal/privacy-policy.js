@@ -317,7 +317,7 @@ const privacyPolicy = ({ URL }) => {
 export default privacyPolicy;
 
 export async function getStaticProps(context) {
-  const URL = process.env.APP_URL + "/legal/privacy-policy";
+  const URL = process.env.NEXT_PUBLIC_VERCEL_URL + "/legal/privacy-policy";
   return {
     props: { URL },
   };

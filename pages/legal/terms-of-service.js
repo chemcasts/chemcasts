@@ -181,7 +181,7 @@ const termsOfService = ({ URL }) => {
 export default termsOfService;
 
 export async function getStaticProps(context) {
-  const URL = process.env.APP_URL + "/legal/terms-of-service";
+  const URL = process.env.NEXT_PUBLIC_VERCEL_URL + "/legal/terms-of-service";
   return {
     props: { URL },
   };
