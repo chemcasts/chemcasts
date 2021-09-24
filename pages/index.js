@@ -164,7 +164,7 @@ export default function Home({ URL }) {
 }
 
 export async function getStaticProps(context) {
-  const URL = process.env.NEXT_PUBLIC_VERCEL_URL;
+  const URL = process.env.APP_URL;
   return {
     props: { URL },
   };

@@ -134,7 +134,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const slug = params.subject;
-  const URL = process.env.NEXT_PUBLIC_VERCEL_URL + "/learn/" + slug + "/notes";
+  const URL = process.env.APP_URL + "/learn/" + slug + "/notes";
   const data = await client.query({
     query: GET_SUBJECT,
     variables: { slug: slug },

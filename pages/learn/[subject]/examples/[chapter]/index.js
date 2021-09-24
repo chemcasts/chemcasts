@@ -127,7 +127,7 @@ export async function getStaticProps({ params }) {
   let examples;
   const slug = params.chapter;
   const URL =
-    process.env.NEXT_PUBLIC_VERCEL_URL +
+    process.env.APP_URL +
     "/learn/" +
     params.subject +
     "/examples/" +

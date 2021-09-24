@@ -104,7 +104,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const slug = params.example;
   const URL =
-    process.env.NEXT_PUBLIC_VERCEL_URL +
+    process.env.APP_URL +
     "/learn/" +
     params.subject +
     "/examples/" +

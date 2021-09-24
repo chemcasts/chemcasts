@@ -127,13 +127,13 @@ export async function getStaticProps({ params }) {
   const slug = params.chapter;
   const noteSlug = "introduction-" + slug;
   const URL =
-    process.env.NEXT_PUBLIC_VERCEL_URL +
+    process.env.APP_URL +
     "/learn/" +
     params.subject +
     "/notes/" +
     params.chapter;
   const canURL =
-    process.env.NEXT_PUBLIC_VERCEL_URL +
+    process.env.APP_URL +
     "/learn/" +
     params.subject +
     "/notes/" +

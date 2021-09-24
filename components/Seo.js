@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const APP_URL = process.env.NEXT_PUBLIC_VERCEL_URL;
+const APP_URL = process.env.APP_URL;
 const defaultDescription =
   "Digital library and commuity portal for chemical engineers. Online chemical engineering learning resources and collaboration platform.";
 const Seo = ({
