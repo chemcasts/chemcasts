@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Layout from "../components/Layout";
-import "../public/svg.css";
+import Layout from "@/comp/Layout";
 import "../public/styles.css";
 import { useRouter } from "next/router";
 import { useEffect } from 'react'
