@@ -7,8 +7,6 @@ const data = [
     name: "chemcasts",
     links: [
       { name: "Learn", href: "/learn" },
-      { name: "Examples", href: "/examples" },
-      { name: "Books", href: "/books" },
       { name: "News", href: "/news" },
     ],
   },

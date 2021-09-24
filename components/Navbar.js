@@ -5,8 +5,6 @@ import Linkedin from "@/comp/Icons/Linkedin";
 
 const data = [
   { name: "Learn", href: "/learn" },
-  { name: "Examples", href: "/examples" },
-  { name: "Books", href: "/books" },
   { name: "News", href: "/news" },
 ];
 
