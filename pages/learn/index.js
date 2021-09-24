@@ -45,7 +45,7 @@ const index = ({ subjects, URL }) => {
 export default index;
 
 export async function getStaticProps(context) {
-  const URL = process.env.NEXT_PUBLIC_VERCEL_URL + "/notes";
+  const URL = process.env.NEXT_PUBLIC_VERCEL_URL + "/learn";
   const data = await client.query({ query: GET_SUBJECTS });
   const subjects = await data.data.subjects;
 

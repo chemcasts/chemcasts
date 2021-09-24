@@ -6,17 +6,20 @@ export default function Home({ URL }) {
   return (
     <>
       <Seo
-        description="Digital library and commuity portal for chemical engineers."
+        description="Digital library and commuity portal for chemical engineers. Online chemical engineering learning resources and
+        collaboration platform."
         twTitle="CHEMCASTS"
-        twDescription="Digital library and commuity portal for chemical engineers."
+        twDescription="Digital library and commuity portal for chemical engineers. Online chemical engineering learning resources and
+        collaboration platform."
         ogTitle="CHEMCASTS"
-        ogDescription="Digital library and commuity portal for chemical engineers."
+        ogDescription="Digital library and commuity portal for chemical engineers. Online chemical engineering learning resources and
+        collaboration platform."
         ogUrl={URL}
       />
       <header className="text-white bg-gray-900">
         <div className="flex pt-10 flex-col items-start px-5 py-3 mx-auto md:flex-row lg:px-28">
           <h1 className="text-5xl font-content text-brand tracking-tighter md:text-7xl">
-            <img src="/logo/brand.svg" />
+            <img src="/logo/brand.svg" alt="Chemcasts" />
           </h1>
         </div>
         <div className="flex flex-col items-center px-5 py-10 mx-auto md:flex-row lg:px-28">
@@ -52,7 +55,7 @@ export default function Home({ URL }) {
           <div className="w-full bg-white rounded lg:w-1/2 lg:max-w-lg md:w-1/2">
             <img
               className="object-cover object-center rounded-lg "
-              alt="hero"
+              alt="Chemcasts- World wide quimico community"
               src="/svg/hero-1.svg"
             />
           </div>
@@ -81,7 +84,7 @@ export default function Home({ URL }) {
                     </p>
                     <Link href="/learn">
                       <a>
-                        <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
+                        <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-50 rounded hover:bg-brand-100 focus:shadow-outline focus:outline-none">
                           {" "}
                           Read{" "}
                         </button>
@@ -111,7 +114,7 @@ export default function Home({ URL }) {
                     </p>
                     <Link href="/learn">
                       <a>
-                        <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
+                        <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-50 rounded hover:bg-brand-100 focus:shadow-outline focus:outline-none">
                           {" "}
                           Solve{" "}
                         </button>
@@ -141,7 +144,7 @@ export default function Home({ URL }) {
                     </p>
                     <Link href="/learn">
                       <a>
-                        <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-100 rounded hover:bg-brand-200 focus:shadow-outline focus:outline-none">
+                        <button className="w-full px-16 py-2 my-2 text-xl font-bold transition duration-500 ease-in-out transform text-brand-500 bg-brand-50 rounded hover:bg-brand-100 focus:shadow-outline focus:outline-none">
                           {" "}
                           Explore{" "}
                         </button>
