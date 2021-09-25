@@ -8,7 +8,7 @@ const index = ({ subjects, URL }) => {
   return (
     <>
       <Seo
-        title="Subjects"
+        title="Learn"
         description="Chemical Engg. Subjects"
         twTitle="Chemical Engg. Subjects"
         twDescription=""
@@ -24,8 +24,8 @@ const index = ({ subjects, URL }) => {
           </h1>
         </div>
         <div className="flex flex-col items-center px-5 py-10 mx-auto md:flex-row lg:px-28">
-          <div className="flex w-full flex-col items-start mb-16 lg:flex-grow lg:pr-24">
-            <h2 className="mb-5 text-3xl font-white tracking-tighter md:text-5xl title-font">
+          <div className="flex w-full flex-col items-start mb-8 lg:flex-grow lg:pr-24">
+            <h2 className="mb-3 text-3xl font-white tracking-tighter md:text-5xl title-font">
               {" "}
               Read, Solve, Explore{" "}
             </h2>

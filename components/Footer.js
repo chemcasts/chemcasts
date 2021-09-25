@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Twitter from "@/comp/Icons/Twitter";
 import Linkedin from "@/comp/Icons/Linkedin";
+import LogoBrandFlat from "@/comp/Svg/Logo/LogoBrandFlat";
 
 const data = [
   {
@@ -41,11 +42,7 @@ const Footer = () => {
               World wide quimico community
             </p>
             <div className="flex flex-wrap items-center">
-              <img
-                src="/logo/logo-brand-flat.svg"
-                className="h-12 w-56 mr-1"
-                alt="CHEMCASTS"
-              />
+              <LogoBrandFlat />
             </div>
           </div>
           <div className="lg:col-span-5 md:col-span-5 col-span-10 col-start-2">

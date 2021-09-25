@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Twitter from "@/comp/Icons/Twitter";
 import Linkedin from "@/comp/Icons/Linkedin";
+import Logo from "./Svg/Logo/Logo";
 
 const data = [
   { name: "Learn", href: "/learn" },
@@ -20,8 +21,8 @@ const Navbar = () => {
       >
         <div className="md:hidden z-48 flex items-center justify-between">
           <Link href="/">
-            <a className="flex items-center" aria-label="Home">
-              <img src="/logo/logo.svg" className="w-12 h-12" alt="CHEMCASTS" />
+            <a className="flex items-center w-12 h-12" aria-label="Home">
+              <Logo />
             </a>
           </Link>
           <div className="flex -mr-2">
@@ -50,12 +51,8 @@ const Navbar = () => {
         <div className="md:justify-between md:flex items-center hidden">
           <div className="md:flex-row md:items-center flex flex-col">
             <Link href="/">
-              <a className="flex items-center mr-5" aria-label="Home">
-                <img
-                  src="/logo/logo.svg"
-                  className="w-12 h-12"
-                  alt="CHEMCASTS"
-                />
+              <a className="flex items-center mr-5 w-12 h-12" aria-label="Home">
+                <Logo />
               </a>
             </Link>
             {data.map((link) => (
@@ -112,12 +109,12 @@ const Navbar = () => {
           </button>
           <div className="flex flex-col items-center w-full h-full p-12">
             <div className="pt-8 mb-6">
-              <a className="flex items-center" href="/" aria-label="Home">
-                <img
-                  src="/logo/logo.svg"
-                  className="w-12 h-12"
-                  alt="CHEMCASTS"
-                />
+              <a
+                className="flex items-center w-12 h-12"
+                href="/"
+                aria-label="Home"
+              >
+                <Logo />
               </a>
             </div>
             <div className="">
