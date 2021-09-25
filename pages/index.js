@@ -1,6 +1,8 @@
 import Newslater from "@/comp/Newslater";
 import Seo from "@/comp/Seo";
 import Link from "next/link";
+import Image from "next/image";
+import Brand from "@/comp/Svg/Logo/Brand";
 
 export default function Home({ URL }) {
   return (
@@ -18,9 +20,9 @@ export default function Home({ URL }) {
       />
       <header className="text-white bg-gray-900">
         <div className="flex pt-10 flex-col items-start px-5 py-3 mx-auto md:flex-row lg:px-28">
-          <h1 className="text-5xl font-content text-brand tracking-tighter md:text-7xl">
-            <img src="/logo/brand.svg" alt="Chemcasts" />
-          </h1>
+          <h5 className="text-4xl font-content text-brand tracking-tighter md:text-7xl">
+            <Brand />
+          </h5>
         </div>
         <div className="flex flex-col items-center px-5 py-10 mx-auto md:flex-row lg:px-28">
           <div className="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
@@ -53,10 +55,14 @@ export default function Home({ URL }) {
             </div>
           </div>
           <div className="w-full bg-white rounded lg:w-1/2 lg:max-w-lg md:w-1/2">
-            <img
+            <Image
               className="object-cover object-center rounded-lg "
               alt="Chemcasts- World wide quimico community"
-              src="/svg/hero-1.svg"
+              src="/png/hero-1.png"
+              loading="lazy"
+              layout="responsive"
+              height={600}
+              width={720}
             />
           </div>
         </div>

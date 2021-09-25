@@ -5,6 +5,7 @@ import Router from "next/router";
 import Seo from "@/comp/Seo";
 import { useRouter } from "next/router";
 import Chapter from "@/comp/Notes/Chapter";
+import Image from "next/image";
 
 const index = ({ subject, URL }) => {
   const router = useRouter();
@@ -52,10 +53,12 @@ const index = ({ subject, URL }) => {
       <header className="bg-gray-900">
         <div className="container flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-16">
           <div className="w-full mb-6 lg:w-1/3 lg:max-w-lg md:w-1/2">
-            <img
+            <Image
               className="object-cover object-center rounded"
               alt={subject.Name}
-              loading="lazy"
+              layout="responsive"
+              height={600}
+              width={720}
               src={subject.Image.url}
             />
           </div>

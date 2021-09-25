@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NumberFormatter from "@/help/NumberFormatter";
+import Image from "next/image";
 
 const Subject = ({ subject }) => {
   var notes = 0;
@@ -29,10 +30,13 @@ const Subject = ({ subject }) => {
       <section id={subject.id} className="pt-5 pb-5 mx-2 lg:mx-10">
         <div className="container rounded bg-gray-300 flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-16">
           <div className="w-full mb-6 lg:w-1/3 lg:max-w-lg md:w-1/2">
-            <img
-              className="object-cover object-center rounded"
+            <Image
+              className="rounded"
               alt={subject.Name}
               loading="lazy"
+              layout="responsive"
+              height={600}
+              width={720}
               src={subject.Image.url}
             />
           </div>
