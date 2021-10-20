@@ -44,7 +44,7 @@ const termsOfUse = ({ URL }) => {
             </ol>
           </nav>
           <div className="prose prose-brand lg:prose-lg xl:prose-xl">
-            <h2>Website Terms of Use</h2>
+            <h2>Terms of Use</h2>
 
             <p>Version 1.0</p>
 

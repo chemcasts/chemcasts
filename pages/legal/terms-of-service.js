@@ -52,7 +52,7 @@ const termsOfService = ({ URL }) => {
             </ol>
           </nav>
           <div className="prose prose-brand lg:prose-lg xl:prose-xl">
-            <h1>Website Terms and Conditions of Use</h1>
+            <h1>Terms of Service</h1>
 
             <h2>1. Terms</h2>
 

@@ -26,7 +26,6 @@ const Seo = ({
       <meta name="robots" content="index, follow" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@CHEMCASTS_" />
-      <meta name="twitter:creator" content="@DKKadavla" />
       <meta name="twitter:title" content={twTitle ? twTitle : "CHEMCASTS"} />
       <meta
         name="twitter:description"
