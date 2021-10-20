@@ -39,7 +39,7 @@ const index = ({ chapter, note, URL, canURL }) => {
   return (
     <>
       <Seo
-        title={chapter.Name + "::" + note.Name}
+        title={chapter.Subject.Name + "::" + chapter.Name + "::" + note.Name}
         description={chapter.Description}
         twTitle={chapter.Name + "::" + note.Name}
         twDescription={chapter.Description}

@@ -10,6 +10,7 @@ const privacyPolicy = ({ URL }) => {
         visitors. This Privacy Policy document contains types of
         information that is collected and recorded by CHEMCASTS and how we
         use it."
+        twTitle="Privacy Policy"
         twDescription="At CHEMCASTS, one of our main priorities is the privacy of our
         visitors. This Privacy Policy document contains types of
         information that is collected and recorded by CHEMCASTS and how we
@@ -45,7 +46,7 @@ const privacyPolicy = ({ URL }) => {
             </ol>
           </nav>
           <div className="prose prose-brand lg:prose-lg xl:prose-xl">
-            <h1>Privacy Policy for CHEMCASTS</h1>
+            <h1>Privacy Policy</h1>
 
             <p>
               At CHEMCASTS, one of our main priorities is the privacy of our
@@ -306,7 +307,9 @@ const privacyPolicy = ({ URL }) => {
               records.
             </p>
 
-            <p>Last Updated on <strong>September,17,2021</strong></p>
+            <p>
+              Last Updated on <strong>September,17,2021</strong>
+            </p>
           </div>
         </div>
       </div>

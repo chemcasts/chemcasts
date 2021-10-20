@@ -1,9 +1,30 @@
 import Link from "next/link";
 import Image from "next/image";
+import Seo from "@/comp/Seo";
 
-const index = () => {
+const index = ({ URL }) => {
   return (
     <>
+      <Seo
+        title="Legal"
+        description="At CHEMCASTS, one of our main priorities is the privacy of our
+    visitors. This Privacy Policy document contains types of
+    information that is collected and recorded by CHEMCASTS and how we
+    use it."
+        twTitle="Legal"
+        twDescription="At CHEMCASTS, one of our main priorities is the privacy of our
+    visitors. This Privacy Policy document contains types of
+    information that is collected and recorded by CHEMCASTS and how we
+    use it."
+        twImage="/png/privacy-protection.png"
+        ogTitle="Legal"
+        ogDescription="At CHEMCASTS, one of our main priorities is the privacy of our
+    visitors. This Privacy Policy document contains types of
+    information that is collected and recorded by CHEMCASTS and how we
+    use it."
+        ogImage="/png/privacy-protection.png"
+        ogUrl={URL}
+      />
       <header className="text-white bg-black">
         <div className="flex flex-col items-center px-5 py-10 mx-auto md:flex-row lg:px-28">
           <div className="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
@@ -70,3 +91,10 @@ const index = () => {
 };
 
 export default index;
+
+export async function getStaticProps(context) {
+  const URL = process.env.APP_URL + "/legal";
+  return {
+    props: { URL },
+  };
+}
