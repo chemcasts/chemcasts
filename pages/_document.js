@@ -21,6 +21,7 @@ class MyDocument extends Document {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('set', {cookie_flags: 'SameSite=None;Secure'});
+            gtag('set', {cookie_domain: '${process.env.NEXT_PUBLIC_APP_URL}'});
             gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
               page_path: window.location.pathname,
             });
