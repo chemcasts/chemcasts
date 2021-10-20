@@ -38,7 +38,13 @@ const NotePage = ({ note, URL }) => {
   return (
     <>
       <Seo
-        title={note.Chapter.Name + "::" + note.Name}
+        title={
+          note.Chapter.Subject.Name +
+          "::" +
+          note.Chapter.Name +
+          "::" +
+          note.Name
+        }
         description={note.Chapter.Description}
         twTitle={note.Chapter.Name + "::" + note.Name}
         twDescription={note.Chapter.Description}

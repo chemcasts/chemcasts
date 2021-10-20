@@ -39,7 +39,7 @@ const index = ({ subject, URL }) => {
   return (
     <>
       <Seo
-        title={subject.Name + "::Notes"}
+        title={subject.Name}
         description={subject.Description}
         twTitle={subject.Name}
         twDescription={subject.Description}
