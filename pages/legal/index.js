@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Seo from "@/comp/Seo";
 
-const index = () => {
+const index = ({ URL }) => {
   return (
     <>
       <Seo
@@ -91,3 +91,10 @@ const index = () => {
 };
 
 export default index;
+
+export async function getStaticProps(context) {
+  const URL = process.env.APP_URL + "/legal";
+  return {
+    props: { URL },
+  };
+}
