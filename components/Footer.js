@@ -97,7 +97,7 @@ const Footer = () => {
                     © 2012 - 2021 CHEMCASTS
                   </p>
                   <p className="text-xs text-gray-300">
-                    A division of SECTION-D Inc.
+                    A division of 009Labs Inc.
                   </p>
                 </div>
               </div>
