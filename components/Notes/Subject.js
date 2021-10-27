@@ -27,8 +27,8 @@ const Subject = ({ subject }) => {
 
   return (
     <>
-      <section id={subject.id} className="pt-5 pb-5 mx-2 lg:mx-10">
-        <div className="container rounded bg-gray-300 flex flex-col px-5 py-16 mx-auto lg:items-center md:flex-row lg:px-16">
+      <section id={subject.id} className="pt-2 pb-2 mx-2 lg:mx-10">
+        <div className="container rounded bg-gray-300 flex flex-col px-5 py-4 mx-auto lg:items-center md:flex-row lg:px-16">
           <div className="w-full mb-6 lg:w-1/3 lg:max-w-lg md:w-1/2">
             <Image
               className="rounded"
@@ -41,7 +41,7 @@ const Subject = ({ subject }) => {
             />
           </div>
           <div className="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16">
-            <h1 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter text-left title-font">
+            <h1 className="mb-8 text-3xl md:text-4xl lg:text-5xl font-bold text-left title-font">
               {subject.Name}
             </h1>
             <p className="mb-8 line-clamp-3 lg:line-clamp-5 text-base leading-relaxed text-left  ">

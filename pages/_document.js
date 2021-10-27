@@ -10,8 +10,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <GA />
-        <Head />
+        <Head>
+          <GA />
+        </Head>
         <body className="font-base flex flex-col min-h-screen">
           <Main />
           <NextScript />
