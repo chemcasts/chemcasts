@@ -93,7 +93,7 @@ const index = ({ URL }) => {
 export default index;
 
 export async function getStaticProps(context) {
-  const URL = process.env.APP_URL + "/legal";
+  const URL = process.env.NEXT_PUBLIC_VERCEL_URL + "/legal";
   return {
     props: { URL },
   };

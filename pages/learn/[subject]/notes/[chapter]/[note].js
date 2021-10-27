@@ -103,7 +103,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const slug = params.note;
   const URL =
-    process.env.APP_URL +
+    process.env.NEXT_PUBLIC_VERCEL_URL +
     "/learn/" +
     params.subject +
     "/notes/" +

@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const baseImage = process.env.NEXT_PUBLIC_APP_URL + "/logo/logo-brand.png";
+const baseImage = process.env.NEXT_PUBLIC_VERCEL_URL + "/logo/logo-brand.png";
 
 const defaultDescription =
   "Digital library and commuity portal for chemical engineers. Online chemical engineering learning resources and collaboration platform.";
