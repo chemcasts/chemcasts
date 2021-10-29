@@ -8,12 +8,13 @@ export default function Home({ URL }) {
   return (
     <>
       <Seo
+        title="World wide quimico community portal"
         description="Digital library and commuity portal for chemical engineers. Online chemical engineering learning resources and
         collaboration platform."
-        twTitle="CHEMCASTS"
+        twTitle="World wide quimico community portal"
         twDescription="Digital library and commuity portal for chemical engineers. Online chemical engineering learning resources and
         collaboration platform."
-        ogTitle="CHEMCASTS"
+        ogTitle="World wide quimico community portal"
         ogDescription="Digital library and commuity portal for chemical engineers. Online chemical engineering learning resources and
         collaboration platform."
         ogUrl={URL}
@@ -170,7 +171,7 @@ export default function Home({ URL }) {
 }
 
 export async function getStaticProps(context) {
-  const URL = process.env.APP_URL;
+  const URL = process.env.NEXT_PUBLIC_VERCEL_URL;
   return {
     props: { URL },
   };

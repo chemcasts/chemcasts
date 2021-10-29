@@ -1,8 +1,17 @@
 import Link from "next/link";
+import Seo from "@/comp/Seo";
 
 const contact = () => {
   return (
     <>
+      <Seo
+        title="Contact"
+        description="Catering Questions?: We are here to help"
+        twTitle="Contact"
+        twDescription="Catering Questions?: We are here to help"
+        ogTitle="Contact"
+        ogDescription="Catering Questions?: We are here to help"
+      />
       <header className="text-white bg-gray-700">
         <div className="flex flex-col items-center px-5 py-10 mx-auto md:flex-row lg:px-28">
           <div className="flex flex-col items-start mb-16 text-left lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:mb-0">
