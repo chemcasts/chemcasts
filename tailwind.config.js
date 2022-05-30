@@ -3,8 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   mode: "jit",
-  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -47,7 +46,7 @@ module.exports = {
           800: "#006600",
           900: "#003300",
         },
-        gray: colors.blueGray,
+        gray: colors.slate,
         primary: {
           DEFAULT: "#150734",
           50: "#703CE5",
