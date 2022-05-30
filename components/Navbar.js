@@ -1,12 +1,12 @@
-import Link from "next/link";
-import React from "react";
-import Twitter from "@/comp/Icons/Twitter";
-import Linkedin from "@/comp/Icons/Linkedin";
-import Logo from "./Svg/Logo/Logo";
+import Link from 'next/link';
+import React from 'react';
+import Twitter from '@/comp/Icons/Twitter';
+import Linkedin from '@/comp/Icons/Linkedin';
+import Logo from './Svg/Logo/Logo';
 
 const data = [
-  { name: "Learn", href: "/learn" },
-  { name: "News", href: "/news" },
+  { name: 'Learn', href: '/learn' },
+  { name: 'News', href: '/news' },
 ];
 
 const Navbar = () => {
@@ -15,8 +15,8 @@ const Navbar = () => {
     <>
       <nav
         className={
-          (navbarOpen ? "z-50 " : "z-20 ") +
-          "max-w-screen-2xl sticky inset-0 top-0 bg-black lg:z-10 w-full col-span-12 px-4 py-2 mx-auto"
+          (navbarOpen ? 'z-50 ' : 'z-20 ') +
+          'max-w-screen-2xl sticky inset-0 top-0 bg-black lg:z-10 w-full col-span-12 px-4 py-2 mx-auto'
         }
       >
         <div className="md:hidden z-48 flex items-center justify-between">
@@ -84,11 +84,12 @@ const Navbar = () => {
 
         <div
           className={
-            (navbarOpen ? "flex " : "hidden ") +
-            "fixed top-0 left-0 z-50 flex flex-col items-center justify-center w-full h-full overflow-hidden bg-black"
+            (navbarOpen ? 'flex ' : 'hidden ') +
+            'fixed top-0 left-0 z-50 flex flex-col items-center justify-center w-full h-full overflow-hidden bg-black'
           }
         >
           <button
+            aria-label="Menu"
             onClick={() => setNavbarOpen(!navbarOpen)}
             className="hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white absolute top-0 right-0 z-50 inline-flex items-center justify-center p-2 m-4 text-gray-300 transition duration-200 ease-in-out rounded-sm"
           >

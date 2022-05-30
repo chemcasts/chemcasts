@@ -60,7 +60,7 @@ export default function Home({ URL }) {
               className="object-cover object-center rounded-lg "
               alt="Chemcasts- World wide quimico community"
               src="/png/hero-1.png"
-              loading="lazy"
+              priority={true}
               layout="responsive"
               height={600}
               width={720}
