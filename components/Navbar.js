@@ -27,6 +27,7 @@ const Navbar = () => {
           </Link>
           <div className="flex -mr-2">
             <button
+              aria-label="Menu"
               onClick={() => setNavbarOpen(!navbarOpen)}
               className="hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white z-20 inline-flex items-center justify-center p-2 text-gray-400 transition duration-300 ease-in-out rounded-sm"
             >

@@ -79,10 +79,10 @@ export default function Home({ URL }) {
                       {" "}
                       Understand concepts
                     </h2>
-                    <h4 className="mb-3 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
+                    <h3 className="mb-3 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
                       {" "}
                       Notes
-                    </h4>
+                    </h3>
                     <p className="mb-3 text-base leading-relaxed text-blueGray-700">
                       {" "}
                       Well-written notes to understanding each chemical
@@ -109,10 +109,10 @@ export default function Home({ URL }) {
                       {" "}
                       Solved Examples
                     </h2>
-                    <h4 className="mb-3 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
+                    <h3 className="mb-3 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
                       {" "}
                       Examples
-                    </h4>
+                    </h3>
                     <p className="mb-3 text-base leading-relaxed text-blueGray-700">
                       {" "}
                       Solve given examples based on every topic and subject to
@@ -139,10 +139,10 @@ export default function Home({ URL }) {
                       {" "}
                       Recommended Books
                     </h2>
-                    <h4 className="mb-3 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
+                    <h3 className="mb-3 text-2xl font-semibold leading-none tracking-tighter text-black lg:text-3xl title-font ">
                       {" "}
                       Books
-                    </h4>
+                    </h3>
                     <p className="mb-3 text-base leading-relaxed text-blueGray-700">
                       {" "}
                       Recommended books for every subject. Explore these books.
