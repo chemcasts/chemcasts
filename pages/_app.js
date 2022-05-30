@@ -50,16 +50,6 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css"
-          integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET"
-          crossOrigin="anonymous"
-        />
       </Head>
       <Component {...pageProps} />
     </Layout>
