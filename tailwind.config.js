@@ -1,9 +1,10 @@
 const colors = require("tailwindcss/colors");
-const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  mode: "jit",
-  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
+  ],
   theme: {
     extend: {
       colors: {
@@ -18,7 +19,7 @@ module.exports = {
           600: "#CC2400",
           700: "#991B00",
           800: "#661200",
-          900: "#330900",
+          900: "#330900"
         },
         "brand-content": {
           DEFAULT: "#1D1B84",
@@ -31,7 +32,7 @@ module.exports = {
           600: "#14125A",
           700: "#0A0A2F",
           800: "#010105",
-          900: "#000000",
+          900: "#000000"
         },
         "light-green": {
           DEFAULT: "#00FF00",
@@ -44,7 +45,7 @@ module.exports = {
           600: "#00CC00",
           700: "#009900",
           800: "#006600",
-          900: "#003300",
+          900: "#003300"
         },
         gray: colors.slate,
         primary: {
@@ -55,7 +56,7 @@ module.exports = {
           300: "#39138E",
           400: "#270D61",
           500: "#150734",
-          600: "#030107",
+          600: "#030107"
         },
         info: "#2094f3",
         success: "#009485",
@@ -63,50 +64,22 @@ module.exports = {
         error: "#ff5724",
         transparent: "transparent",
         current: "currentColor",
-        gray: colors.gray,
-        blueGray: colors.blueGray,
+        blueGray: colors.slate,
         cyan: colors.cyan,
-        blue: colors.blue,
+        blue: colors.blue
       },
       fontFamily: {
         title: ["Anton", "sans-serif"],
-        base: ["Rubik", "sans-serif"],
-      },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            blockquote: {
-              fontWeight: "500",
-              fontStyle: "italic",
-              color: colors.gray[900],
-              borderLeftWidth: "0.25rem",
-              borderLeftColor: theme("colors.brand.DEFAULT"),
-              quotes: '"\\201C""\\201D""\\2018""\\2019"',
-            },
-            "ol > li::before": {
-              content:
-                'counter(list-item, var(--list-counter-style, decimal)) "."',
-              position: "absolute",
-              fontWeight: "400",
-              color: theme("colors.brand.DEFAULT"),
-            },
-            "ul > li::before": {
-              content: '""',
-              position: "absolute",
-              backgroundColor: theme("colors.brand.DEFAULT"),
-              borderRadius: "50%",
-            },
-          },
-        },
-      }),
-    },
+        base: ["Rubik", "sans-serif"]
+      }
+    }
   },
   corePlugins: {},
   plugins: [
     require("@tailwindcss/forms")({
-      strategy: "class",
+      strategy: "class"
     }),
     require("@tailwindcss/typography"),
-    require("@tailwindcss/line-clamp"),
-  ],
+    require("@tailwindcss/line-clamp")
+  ]
 };

@@ -41,7 +41,7 @@ const Note = ({ note, subject, chapter }) => {
             </ol>
           </nav>
 
-          <div className="prose prose-brand lg:prose-lg xl:prose-xl">
+          <div className="prose prose-blockquote:border-brand lg:prose-lg xl:prose-xl">
             <Markdown markdown={note.Body} />
           </div>
         </div>
